@@ -1,156 +1,188 @@
-# 语音 AI 助手 - 项目骨架
+# MagicMirrorPro - 语音 AI 助手
 
-这是一个运行在树莓派上的语音 AI 助手项目骨架代码。项目采用模块化设计，便于后续扩展和实现具体功能。
+运行在树莓派上的语音 AI 助手项目，支持唤醒词检测、语音识别、自然语言理解和文本转语音。
+
+## 功能特性
+
+- 🎤 **唤醒词检测**：使用 Vosk 进行本地唤醒词检测
+- 🔊 **语音识别**：集成 Google Speech-to-Text API 和本地 Vosk ASR
+- 💬 **自然语言理解**：基于模式匹配的意图识别和 LLM 聊天
+- 🎵 **文本转语音**：使用 Piper TTS 进行本地语音合成
+- 🖥️ **Pygame UI**：简洁的图形界面，支持多种状态显示
+
+## 安装步骤
+
+### 1. 克隆项目
+
+```bash
+git clone https://github.com/your-username/MagicMirrorPro.git
+cd MagicMirrorPro
+```
+
+### 2. 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. 配置环境
+
+#### 3.1 复制配置文件
+
+```bash
+cp config.py.example config.py
+```
+
+#### 3.2 配置 API 密钥
+
+编辑 `config.py`，填入你的 API 密钥：
+
+```python
+# Google Cloud Speech-to-Text API 凭证
+GOOGLE_ASR_CREDENTIALS_PATH = "asr/your-google-credentials.json"
+
+# Hugging Face API Key（用于 LLM）
+LLM_API_KEY = "your-huggingface-api-key-here"
+```
+
+#### 3.3 下载 Google Cloud 凭证文件
+
+1. 访问 [Google Cloud Console](https://console.cloud.google.com/)
+2. 创建服务账号并下载 JSON 凭证文件
+3. 将凭证文件放到 `asr/` 目录下
+4. 在 `config.py` 中更新 `GOOGLE_ASR_CREDENTIALS_PATH`
+
+#### 3.4 下载 TTS 模型（可选）
+
+如果需要使用本地 TTS，下载 Piper 模型：
+
+```bash
+# 创建模型目录
+mkdir -p tts/model
+
+# 下载模型（示例）
+# 从 https://github.com/rhasspy/piper/releases 下载模型
+# 将 .onnx 文件放到 tts/model/ 目录
+```
 
 ## 项目结构
 
 ```
 MagicMirrorPro/
-├── main.py                 # 程序入口
-├── config.py               # 全局配置
-├── requirements.txt        # 依赖列表
-├── README.md              # 项目说明
-│
-├── core/                   # 核心模块
-│   ├── app.py             # 主应用类和状态机
-│   └── state.py           # 状态枚举
-│
-├── io_audio/              # 音频输入输出
-│   ├── recorder.py        # 录音模块
-│   └── player.py          # 播放模块
-│
-├── asr/                   # 语音识别
-│   ├── google_asr_client.py    # Google ASR 客户端
-│   ├── local_asr_stub.py        # 本地 ASR 占位实现
-│   └── models.py               # ASR 数据模型
-│
-├── nlu/                   # 自然语言理解
-│   ├── llm_client.py      # LLM 客户端
-│   ├── intent_parser.py   # 意图解析器
-│   └── models.py          # NLU 数据模型
-│
-├── actions/               # 动作执行
-│   ├── base.py            # 动作基类
-│   ├── weather.py          # 天气动作
-│   ├── news.py            # 新闻动作
-│   └── registry.py        # 动作注册表
-│
-├── ui/                    # UI 模块
-│   ├── ui_manager.py      # UI 管理器
-│   ├── screens.py         # 屏幕类
-│   └── constants.py       # UI 常量
-│
-├── tts/                   # 文本转语音
-│   ├── tts_client.py      # TTS 客户端
-│   └── models.py          # TTS 数据模型
-│
-└── utils/                 # 工具模块
-    ├── logger.py          # 日志工具
-    └── paths.py           # 路径管理
+├── main.py              # 程序入口
+├── config.py            # 配置文件（需要自己创建）
+├── config.py.example    # 配置文件示例
+├── requirements.txt     # Python 依赖
+├── core/                # 核心模块
+│   ├── app.py          # 主应用类（状态机）
+│   └── state.py        # 状态枚举
+├── io_audio/            # 音频输入输出
+│   ├── recorder.py     # 录音模块
+│   ├── player.py       # 播放模块
+│   └── streaming_recorder.py  # 流式录音和唤醒词检测
+├── asr/                 # 语音识别
+│   ├── google_asr_client.py  # Google ASR 客户端
+│   └── models.py       # ASR 数据模型
+├── nlu/                 # 自然语言理解
+│   ├── pattern_nlu.py  # 模式匹配 NLU
+│   ├── llm_client.py   # LLM 客户端
+│   └── models.py       # NLU 数据模型
+├── actions/             # 预定义动作
+│   ├── weather.py      # 天气查询
+│   ├── news.py         # 新闻播报
+│   └── registry.py     # 动作注册表
+├── tts/                 # 文本转语音
+│   ├── tts_client.py   # TTS 客户端
+│   └── models.py       # TTS 数据模型
+├── ui/                  # 用户界面
+│   ├── ui_manager.py   # UI 管理器
+│   └── screens.py      # 屏幕定义
+└── utils/               # 工具函数
+    └── logger.py        # 日志工具
 ```
 
-## 功能流程
+## 使用方法
 
-1. **唤醒** → 按键（空格键）或唤醒词检测
-2. **录音** → 采集麦克风音频，保存为 FLAC/WAV
-3. **ASR** → 语音转文字（Google ASR 或本地 ASR）
-4. **NLU/LLM** → 语义理解和意图识别
-5. **意图路由** → 判断是预定义动作还是普通聊天
-6. **执行动作/聊天** → 执行相应功能并更新 UI
-7. **TTS** → 文本转语音
-8. **播放** → 播放回复音频
-9. **回到空闲** → 等待下一次唤醒
-
-## 状态机
-
-```
-IDLE → LISTENING → TRANSCRIBING → THINKING → ACTING/CHATTING → SPEAKING → IDLE
-```
-
-## 安装和运行
-
-### 1. 安装依赖
+### 运行程序
 
 ```bash
-cd /home/pi/MagicMirrorPro
-pip install -r requirements.txt
+python3 main.py
 ```
 
-### 2. 配置
+### 操作说明
 
-编辑 `config.py` 设置：
-- Google ASR 凭证路径
-- LLM API 密钥和 URL
-- 音频参数
-- UI 设置
+- **唤醒**：说出唤醒词 "hello"（可在代码中配置）
+- **退出**：按空格键退出程序
 
-### 3. 运行
+## 状态流程
+
+```
+IDLE → LISTENING → THINKING → ACTING/CHATTING → SPEAKING → IDLE
+```
+
+1. **IDLE**：空闲状态，后台监听唤醒词
+2. **LISTENING**：检测到唤醒词，开始录音和识别
+3. **THINKING**：识别完成，进行意图理解和回复生成
+4. **ACTING/CHATTING**：执行预定义动作或显示聊天回复
+5. **SPEAKING**：播放 TTS 音频
+6. **IDLE**：回到空闲状态
+
+## 配置说明
+
+### 环境变量
+
+可以通过环境变量覆盖配置文件中的设置：
 
 ```bash
-python main.py
+export GOOGLE_ASR_CREDENTIALS_PATH="/path/to/credentials.json"
+export LLM_API_KEY="your-api-key"
+export LLM_API_URL="https://router.huggingface.co/v1/chat/completions"
+export NEWS_API_KEY="your-news-api-key"  # 可选
 ```
 
-### 4. 使用
+### 日志文件
 
-- 按 **空格键** 唤醒助手
-- 程序会模拟完整的处理流程
-- 在 pygame 窗口中查看 UI 状态变化
+- 日志位置：`logs/assistant.log`
+- ASR 结果：`temp/asr_results/asr_results.txt`（每次重写）
 
 ## 开发说明
 
-### 当前状态
+### 添加新的预定义动作
 
-- ✅ 项目骨架和模块划分已完成
-- ✅ 状态机和主循环框架已实现
-- ✅ UI 框架（pygame）已搭建
-- ⚠️ 大部分功能为占位实现（TODO）
+1. 在 `actions/` 目录下创建新的动作文件
+2. 实现 `BaseAction` 接口
+3. 在 `actions/registry.py` 中注册动作
+4. 在 `nlu/pattern_nlu.py` 中添加匹配模式
 
-### 待实现功能
+### 测试
 
-1. **录音功能** (`io_audio/recorder.py`)
-   - 使用 pyaudio 或 sounddevice 实现真实录音
-   - 保存为 FLAC/WAV 格式
+运行测试文件：
 
-2. **音频播放** (`io_audio/player.py`)
-   - 使用 pygame.mixer 实现音频播放
+```bash
+# ASR 测试
+python3 test/asr_test.py
 
-3. **Google ASR** (`asr/google_asr_client.py`)
-   - 实现 Google Cloud Speech-to-Text API 调用
+# LLM 测试
+python3 test/llm_test.py
 
-4. **本地 ASR** (`asr/local_asr_stub.py`)
-   - 可以集成 vosk 或其他本地 ASR 引擎
+# TTS 测试
+python3 test/tts_test.py
 
-5. **LLM 客户端** (`nlu/llm_client.py`)
-   - 实现 OpenAI、Claude 或其他 LLM API 调用
-
-6. **TTS 客户端** (`tts/tts_client.py`)
-   - 实现 gTTS、pyttsx3 或其他 TTS 引擎
-
-7. **动作实现** (`actions/`)
-   - 实现天气、新闻等具体动作的业务逻辑
-
-### 扩展新功能
-
-1. **添加新动作**：
-   - 在 `actions/` 目录创建新动作类（继承 `BaseAction`）
-   - 在 `actions/registry.py` 中注册
-
-2. **添加新 UI 屏幕**：
-   - 在 `ui/screens.py` 中创建新屏幕类（继承 `BaseScreen`）
-   - 在 `ui/ui_manager.py` 中注册
-
-3. **切换 ASR/TTS 引擎**：
-   - 在 `core/app.py` 中修改初始化代码
-   - 或通过配置文件控制
+# UI 测试
+python3 test/ui_manager_test.py
+```
 
 ## 注意事项
 
-- 当前代码使用占位实现，可以运行但不会执行真实功能
-- 需要逐步实现各个模块的具体逻辑
-- 确保树莓派有足够的权限访问麦克风和音频设备
-- 如果使用 Google ASR，需要配置服务账号凭证
+⚠️ **重要**：
+- 不要将 `config.py` 和 API 凭证文件提交到 Git
+- 大文件（如 TTS 模型）不会包含在仓库中
+- 请使用 `config.py.example` 作为配置模板
 
 ## 许可证
 
-本项目为骨架代码，供学习和开发使用。
+[添加你的许可证信息]
 
+## 贡献
+
+欢迎提交 Issue 和 Pull Request！
