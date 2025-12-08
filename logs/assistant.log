@@ -1,0 +1,1427 @@
+2025-12-07 17:48:15 - __main__ - INFO - 🚀 启动语音 AI 助手...
+2025-12-07 17:48:15 - core.app - INFO - 📦 初始化应用模块...
+2025-12-07 17:48:15 - io_audio.player - INFO - 🔊 音频播放器已初始化
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO - ✅ Vosk 模型加载成功: /home/pi/MagicMirrorPro/asr/model
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO - ✅ Google ASR 客户端初始化成功
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO - 📋 可用音频输入设备:
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO -   设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:1,0) (输入通道: 2)
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO -   设备 6: pulse (输入通道: 32)
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO -   设备 13: default (输入通道: 32)
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO - ✅ 使用设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:1,0) (采样率: 48000Hz, 通道: 1)
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO - ✅ 音频流已启动并保持运行
+2025-12-07 17:48:18 - io_audio.streaming_recorder - INFO - ✅ 流式录音器初始化完成
+2025-12-07 17:48:18 - nlu.pattern_nlu - INFO - 🔧 初始化 Pattern-based NLU
+2025-12-07 17:48:18 - nlu.llm_client - INFO - 🔧 初始化 LLM 客户端
+2025-12-07 17:48:18 - actions.base - INFO - 🔧 初始化动作: weather
+2025-12-07 17:48:18 - actions.registry - INFO - ✅ 注册动作: weather
+2025-12-07 17:48:18 - actions.base - INFO - 🔧 初始化动作: news
+2025-12-07 17:48:18 - actions.registry - INFO - ✅ 注册动作: news
+2025-12-07 17:48:18 - actions.registry - INFO - 📋 动作注册表初始化完成，已注册 2 个动作
+2025-12-07 17:48:18 - tts.tts_client - INFO - 🔧 初始化 TTS 客户端: local
+2025-12-07 17:48:24 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:48:24 - ui.screens - INFO - ✅ 加载了 9 张 listening 图片
+2025-12-07 17:48:25 - ui.screens - INFO - ✅ 加载了 8 张 talking 图片
+2025-12-07 17:48:25 - ui.screens - INFO - ✅ 加载了 8 张 talking 图片
+2025-12-07 17:48:25 - ui.ui_manager - INFO - 🖥️ UI 管理器初始化完成
+2025-12-07 17:48:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-07 17:48:25 - core.app - INFO - ✅ 应用初始化完成
+2025-12-07 17:48:25 - core.app - INFO - 🔄 进入主循环...
+2025-12-07 17:48:25 - core.app - INFO - 🎤 后台开始监听，等待唤醒词（UI 保持空闲状态）...
+2025-12-07 17:48:25 - core.app - INFO - 🔄 开始持续监听循环...
+2025-12-07 17:48:25 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-07 17:48:25 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-07 17:48:26 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:48:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hello
+2025-12-07 17:48:31 - io_audio.streaming_recorder - INFO - ✅ 在部分结果中检测到唤醒词 'hello'
+2025-12-07 17:48:31 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词 'hello'
+2025-12-07 17:48:31 - core.app - INFO - 🔔 唤醒词检测回调被触发
+2025-12-07 17:48:31 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词，准备开始识别...
+2025-12-07 17:48:31 - io_audio.streaming_recorder - INFO - 🔊 开始 Google 流式识别，请说话...
+2025-12-07 17:48:31 - core.app - INFO - 🎤 检测到唤醒词，切换到监听状态...
+2025-12-07 17:48:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> listening
+2025-12-07 17:48:35 - io_audio.streaming_recorder - INFO - 📝 识别到句子: How are you?
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - io_audio.streaming_recorder - INFO - 💾 识别结果已保存: How are you?
+2025-12-07 17:48:35 - io_audio.streaming_recorder - INFO - ✅ 识别到最终结果，停止识别流程
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 检测到识别结果: How are you?，等待处理...
+2025-12-07 17:48:35 - core.app - INFO - ✅ 最终识别结果: How are you?
+2025-12-07 17:48:35 - core.app - INFO - 🛑 监听任务已结束
+2025-12-07 17:48:35 - core.app - INFO - 🔍 开始意图识别...
+2025-12-07 17:48:35 - core.app - INFO - 💬 未识别到预定义动作，调用 LLM 生成回复...
+2025-12-07 17:48:35 - nlu.llm_client - INFO - 🤔 LLM 处理: How are you?...
+2025-12-07 17:48:36 - core.app - INFO - ✅ LLM 生成回复: The Mirror sees the Queen's sorrowful evening....
+2025-12-07 17:48:36 - core.app - INFO - 💬 处理聊天回复...
+2025-12-07 17:48:36 - ui.ui_manager - INFO - 🔄 切换 UI 模式: listening -> talking
+2025-12-07 17:48:36 - tts.tts_client - INFO - 🔊 开始 TTS 合成: The Mirror sees the Queen's sorrowful evening....
+2025-12-07 17:48:37 - core.app - INFO - 🔊 TTS 文件已生成...
+2025-12-07 17:48:37 - core.app - INFO - 📁 TTS 文件路径: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:48:37 - ui.ui_manager - INFO - 🔄 切换 UI 模式: talking -> talking
+2025-12-07 17:48:37 - core.app - INFO - ✅ TTS 文件已保存，大小: 74.54 KB
+2025-12-07 17:48:37 - core.app - INFO - 🎵 开始播放音频...
+2025-12-07 17:48:37 - io_audio.player - INFO - ▶️ 播放音频: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:48:39 - io_audio.player - INFO - ✅ 音频播放完成
+2025-12-07 17:48:39 - core.app - INFO - ✅ 音频播放完成，回到空闲状态
+2025-12-07 17:48:39 - ui.ui_manager - INFO - 🔄 切换 UI 模式: talking -> idle
+2025-12-07 17:48:39 - core.app - INFO - 🎤 后台开始监听，等待唤醒词（UI 保持空闲状态）...
+2025-12-07 17:48:39 - core.app - INFO - 🔄 开始持续监听循环...
+2025-12-07 17:48:39 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-07 17:48:39 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-07 17:48:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: anything
+2025-12-07 17:48:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hello
+2025-12-07 17:48:42 - io_audio.streaming_recorder - INFO - ✅ 在部分结果中检测到唤醒词 'hello'
+2025-12-07 17:48:42 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词 'hello'
+2025-12-07 17:48:42 - core.app - INFO - 🔔 唤醒词检测回调被触发
+2025-12-07 17:48:42 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词，准备开始识别...
+2025-12-07 17:48:42 - io_audio.streaming_recorder - INFO - 🔊 开始 Google 流式识别，请说话...
+2025-12-07 17:48:42 - core.app - INFO - 🎤 检测到唤醒词，切换到监听状态...
+2025-12-07 17:48:42 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> listening
+2025-12-07 17:48:45 - io_audio.streaming_recorder - INFO - 📝 识别到句子: What's the news?
+2025-12-07 17:48:45 - io_audio.streaming_recorder - INFO - 💾 识别结果已保存: What's the news?
+2025-12-07 17:48:45 - io_audio.streaming_recorder - INFO - ✅ 识别到最终结果，停止识别流程
+2025-12-07 17:48:45 - core.app - INFO - ✅ 检测到识别结果: What's the news?，等待处理...
+2025-12-07 17:48:45 - core.app - INFO - ✅ 检测到识别结果: What's the news?，等待处理...
+2025-12-07 17:48:45 - core.app - INFO - ✅ 检测到识别结果: What's the news?，等待处理...
+2025-12-07 17:48:45 - core.app - INFO - ✅ 检测到识别结果: What's the news?，等待处理...
+2025-12-07 17:48:45 - core.app - INFO - ✅ 检测到识别结果: What's the news?，等待处理...
+2025-12-07 17:48:45 - core.app - INFO - ✅ 检测到识别结果: What's the news?，等待处理...
+2025-12-07 17:48:46 - core.app - INFO - ✅ 检测到识别结果: What's the news?，等待处理...
+2025-12-07 17:48:46 - core.app - INFO - ✅ 最终识别结果: What's the news?
+2025-12-07 17:48:46 - core.app - INFO - 🛑 监听任务已结束
+2025-12-07 17:48:46 - core.app - INFO - 🔍 开始意图识别...
+2025-12-07 17:48:46 - nlu.pattern_nlu - INFO - ✅ 模式匹配成功: '\bnews\b' -> action: news
+2025-12-07 17:48:46 - core.app - INFO - ✅ 模式匹配识别到动作: news
+2025-12-07 17:48:46 - core.app - INFO - ⚙️ 执行动作: news
+2025-12-07 17:48:46 - actions.news - INFO - 📰 执行新闻获取
+2025-12-07 17:48:46 - actions.news - INFO - ✅ 从 BBC RSS 获取了 10 条新闻标题
+2025-12-07 17:48:46 - actions.news - INFO - ✅ 成功获取 10 条新闻标题
+2025-12-07 17:48:46 - ui.ui_manager - INFO - 🔄 切换 UI 模式: listening -> news
+2025-12-07 17:48:46 - tts.tts_client - INFO - 🔊 开始 TTS 合成: I found 10 news headlines for you....
+2025-12-07 17:48:46 - core.app - INFO - 🔊 TTS 文件已生成...
+2025-12-07 17:48:46 - core.app - INFO - 📁 TTS 文件路径: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:48:46 - ui.ui_manager - INFO - 🔄 切换 UI 模式: news -> talking
+2025-12-07 17:48:46 - core.app - INFO - ✅ TTS 文件已保存，大小: 69.54 KB
+2025-12-07 17:48:46 - core.app - INFO - 🎵 开始播放音频...
+2025-12-07 17:48:46 - io_audio.player - INFO - ▶️ 播放音频: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:48:48 - io_audio.player - INFO - ✅ 音频播放完成
+2025-12-07 17:48:48 - core.app - INFO - ✅ 音频播放完成，回到空闲状态
+2025-12-07 17:48:48 - ui.ui_manager - INFO - 🔄 切换 UI 模式: talking -> idle
+2025-12-07 17:48:48 - core.app - INFO - 🎤 后台开始监听，等待唤醒词（UI 保持空闲状态）...
+2025-12-07 17:48:48 - core.app - INFO - 🔄 开始持续监听循环...
+2025-12-07 17:48:48 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-07 17:48:48 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-07 17:48:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hello
+2025-12-07 17:48:54 - io_audio.streaming_recorder - INFO - ✅ 在部分结果中检测到唤醒词 'hello'
+2025-12-07 17:48:54 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词 'hello'
+2025-12-07 17:48:54 - core.app - INFO - 🔔 唤醒词检测回调被触发
+2025-12-07 17:48:54 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词，准备开始识别...
+2025-12-07 17:48:54 - io_audio.streaming_recorder - INFO - 🔊 开始 Google 流式识别，请说话...
+2025-12-07 17:48:54 - core.app - INFO - 🎤 检测到唤醒词，切换到监听状态...
+2025-12-07 17:48:54 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> listening
+2025-12-07 17:48:57 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:48:58 - io_audio.streaming_recorder - INFO - 📝 识别到句子: What's up?
+2025-12-07 17:48:58 - io_audio.streaming_recorder - INFO - 💾 识别结果已保存: What's up?
+2025-12-07 17:48:58 - io_audio.streaming_recorder - INFO - ✅ 识别到最终结果，停止识别流程
+2025-12-07 17:48:58 - core.app - INFO - ✅ 检测到识别结果: What's up?，等待处理...
+2025-12-07 17:48:58 - core.app - INFO - ✅ 检测到识别结果: What's up?，等待处理...
+2025-12-07 17:48:58 - core.app - INFO - ✅ 检测到识别结果: What's up?，等待处理...
+2025-12-07 17:48:58 - core.app - INFO - ✅ 检测到识别结果: What's up?，等待处理...
+2025-12-07 17:48:58 - core.app - INFO - ✅ 检测到识别结果: What's up?，等待处理...
+2025-12-07 17:48:58 - core.app - INFO - ✅ 检测到识别结果: What's up?，等待处理...
+2025-12-07 17:48:58 - core.app - INFO - ✅ 最终识别结果: What's up?
+2025-12-07 17:48:58 - core.app - INFO - 🛑 监听任务已结束
+2025-12-07 17:48:58 - core.app - INFO - 🔍 开始意图识别...
+2025-12-07 17:48:58 - core.app - INFO - 💬 未识别到预定义动作，调用 LLM 生成回复...
+2025-12-07 17:48:58 - nlu.llm_client - INFO - 🤔 LLM 处理: What's up?...
+2025-12-07 17:48:59 - core.app - INFO - ✅ LLM 生成回复: The Mirror sees... darkness. O Queen, hear the tru...
+2025-12-07 17:48:59 - core.app - INFO - 💬 处理聊天回复...
+2025-12-07 17:48:59 - ui.ui_manager - INFO - 🔄 切换 UI 模式: listening -> talking
+2025-12-07 17:48:59 - tts.tts_client - INFO - 🔊 开始 TTS 合成: The Mirror sees... darkness. O Queen, hear the tru...
+2025-12-07 17:49:01 - core.app - INFO - 🔊 TTS 文件已生成...
+2025-12-07 17:49:01 - core.app - INFO - 📁 TTS 文件路径: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:49:01 - ui.ui_manager - INFO - 🔄 切换 UI 模式: talking -> talking
+2025-12-07 17:49:01 - core.app - INFO - ✅ TTS 文件已保存，大小: 216.04 KB
+2025-12-07 17:49:01 - core.app - INFO - 🎵 开始播放音频...
+2025-12-07 17:49:01 - io_audio.player - INFO - ▶️ 播放音频: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:49:06 - io_audio.player - INFO - ✅ 音频播放完成
+2025-12-07 17:49:06 - core.app - INFO - ✅ 音频播放完成，回到空闲状态
+2025-12-07 17:49:06 - ui.ui_manager - INFO - 🔄 切换 UI 模式: talking -> idle
+2025-12-07 17:49:06 - core.app - INFO - 🎤 后台开始监听，等待唤醒词（UI 保持空闲状态）...
+2025-12-07 17:49:06 - core.app - INFO - 🔄 开始持续监听循环...
+2025-12-07 17:49:06 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-07 17:49:06 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-07 17:49:07 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:49:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah
+2025-12-07 17:49:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah
+2025-12-07 17:49:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah that
+2025-12-07 17:49:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth
+2025-12-07 17:49:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth if he
+2025-12-07 17:49:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth if he
+2025-12-07 17:49:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah that would have been through
+2025-12-07 17:49:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving
+2025-12-07 17:49:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving
+2025-12-07 17:49:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving
+2025-12-07 17:49:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here
+2025-12-07 17:49:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here
+2025-12-07 17:49:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but it
+2025-12-07 17:49:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doc is
+2025-12-07 17:49:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doc is
+2025-12-07 17:49:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doc it is or
+2025-12-07 17:49:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doctors are having
+2025-12-07 17:49:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doctors are having problems
+2025-12-07 17:49:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doctors are having problems
+2025-12-07 17:49:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doctors are heading for
+2025-12-07 17:49:13 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:49:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doctors are heading for
+2025-12-07 17:49:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah the truth it means moving here but er doctors are heading for
+2025-12-07 17:49:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: yeah the truth it means moving here but er doctors or heck
+2025-12-07 17:49:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before
+2025-12-07 17:49:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before
+2025-12-07 17:49:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: four hundred
+2025-12-07 17:49:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred for
+2025-12-07 17:49:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred for
+2025-12-07 17:49:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred for you
+2025-12-07 17:49:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: four hundred and
+2025-12-07 17:49:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred or
+2025-12-07 17:49:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred or
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred or don't
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred or don't
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: before hatred or don't
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: before hatred or true
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:49:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the
+2025-12-07 17:49:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should you
+2025-12-07 17:49:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should you
+2025-12-07 17:49:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should you
+2025-12-07 17:49:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: reviews
+2025-12-07 17:49:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: email
+2025-12-07 17:49:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: email
+2025-12-07 17:49:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: email
+2025-12-07 17:49:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know what
+2025-12-07 17:49:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know what
+2025-12-07 17:49:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know what
+2025-12-07 17:49:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: you'll note
+2025-12-07 17:49:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: sherman
+2025-12-07 17:49:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: sherman
+2025-12-07 17:49:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: children on a
+2025-12-07 17:49:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: genre don't
+2025-12-07 17:49:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: genre don't
+2025-12-07 17:49:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: genre don't
+2025-12-07 17:49:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: genre
+2025-12-07 17:49:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing
+2025-12-07 17:49:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing
+2025-12-07 17:49:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing the world
+2025-12-07 17:49:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing the road
+2025-12-07 17:49:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing the road
+2025-12-07 17:49:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing the road hazard
+2025-12-07 17:49:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing the road hazard
+2025-12-07 17:49:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing the world has
+2025-12-07 17:49:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: publishing the world has
+2025-12-07 17:49:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: publishing the road hazard
+2025-12-07 17:49:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:49:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: solution for a new
+2025-12-07 17:49:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: solution for a new
+2025-12-07 17:49:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can't
+2025-12-07 17:49:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can't
+2025-12-07 17:49:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can't
+2025-12-07 17:49:29 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:49:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can't
+2025-12-07 17:49:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: solution for a new account
+2025-12-07 17:49:32 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:49:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: done
+2025-12-07 17:49:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: furthermore
+2025-12-07 17:49:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: furthermore the
+2025-12-07 17:49:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: furthermore the
+2025-12-07 17:49:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: furthermore
+2025-12-07 17:49:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: furthermore
+2025-12-07 17:49:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: furthermore the senate
+2025-12-07 17:49:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: using them
+2025-12-07 17:49:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: using them
+2025-12-07 17:49:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: using them are
+2025-12-07 17:49:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: using them are
+2025-12-07 17:49:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: using them are
+2025-12-07 17:49:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: using them are
+2025-12-07 17:49:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: using them off
+2025-12-07 17:49:39 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do
+2025-12-07 17:49:39 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do
+2025-12-07 17:49:39 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do
+2025-12-07 17:49:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: deep down
+2025-12-07 17:49:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: deep down
+2025-12-07 17:49:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the dullness
+2025-12-07 17:49:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do down his
+2025-12-07 17:49:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do down his
+2025-12-07 17:49:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do down his name
+2025-12-07 17:49:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do down his name
+2025-12-07 17:49:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do down his name
+2025-12-07 17:49:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: does he do down his name
+2025-12-07 17:49:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: does he do down his name
+2025-12-07 17:49:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two
+2025-12-07 17:49:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to target
+2025-12-07 17:49:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to target
+2025-12-07 17:49:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets
+2025-12-07 17:49:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than
+2025-12-07 17:49:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than
+2025-12-07 17:49:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than
+2025-12-07 17:49:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any
+2025-12-07 17:49:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any
+2025-12-07 17:49:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any
+2025-12-07 17:49:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this
+2025-12-07 17:49:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than anyone listening
+2025-12-07 17:49:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than anyone listening
+2025-12-07 17:49:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than samuel
+2025-12-07 17:49:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this in tanzania
+2025-12-07 17:49:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this in tanzania
+2025-12-07 17:49:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and and
+2025-12-07 17:49:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy
+2025-12-07 17:49:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy
+2025-12-07 17:49:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and and your
+2025-12-07 17:49:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue of
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue of
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and and your kids from personal
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue poisoning
+2025-12-07 17:49:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue poisoning
+2025-12-07 17:49:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two targets than any of this intense and enjoy the issue poisoning
+2025-12-07 17:49:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: two targets than any of this intense and your key issue poisoning
+2025-12-07 17:49:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it
+2025-12-07 17:49:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was
+2025-12-07 17:49:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was
+2025-12-07 17:49:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was
+2025-12-07 17:49:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was a
+2025-12-07 17:49:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was a
+2025-12-07 17:49:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was a hotel
+2025-12-07 17:49:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was a hotel
+2025-12-07 17:49:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it was a hotel
+2025-12-07 17:49:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: couldn't have said you
+2025-12-07 17:49:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: couldn't have said you
+2025-12-07 17:49:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: couldn't have said you
+2025-12-07 17:49:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: couldn't have said you
+2025-12-07 17:49:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: what it was a hotel gym
+2025-12-07 17:49:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: obama
+2025-12-07 17:49:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: ha ha possible
+2025-12-07 17:49:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: ha ha possible
+2025-12-07 17:49:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: abbas superdome
+2025-12-07 17:49:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: abbas superdome
+2025-12-07 17:49:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: abbas superdome
+2025-12-07 17:49:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: abbas superdome
+2025-12-07 17:49:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: abbas superdome
+2025-12-07 17:49:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: ha ha possible
+2025-12-07 17:49:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: another
+2025-12-07 17:49:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing's
+2025-12-07 17:49:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing's
+2025-12-07 17:49:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing
+2025-12-07 17:49:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to
+2025-12-07 17:49:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do
+2025-12-07 17:49:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do
+2025-12-07 17:49:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was to
+2025-12-07 17:49:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was younger
+2025-12-07 17:49:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was younger
+2025-12-07 17:49:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was again click
+2025-12-07 17:49:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go
+2025-12-07 17:49:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go
+2025-12-07 17:49:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was a young woman who
+2025-12-07 17:49:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go with
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go with
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go with
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was a young woman on
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was a young woman on
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was a young woman on
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was a young woman on
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out
+2025-12-07 17:49:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out
+2025-12-07 17:49:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on it
+2025-12-07 17:49:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on the
+2025-12-07 17:49:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on the
+2025-12-07 17:49:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on the nonnuclear
+2025-12-07 17:49:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on a non
+2025-12-07 17:49:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on the not agree to deal with
+2025-12-07 17:49:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on the not agree to deal with
+2025-12-07 17:49:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on a non increases your
+2025-12-07 17:49:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on a non increases your
+2025-12-07 17:49:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: oh nothing to do was gonna go out on a non increases your
+2025-12-07 17:49:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: oh nothing to do was young gonna go out on not agree to do
+2025-12-07 17:49:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: integration
+2025-12-07 17:50:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: anything untoward
+2025-12-07 17:50:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on to
+2025-12-07 17:50:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on to
+2025-12-07 17:50:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on to denote
+2025-12-07 17:50:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on to get
+2025-12-07 17:50:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on to get
+2025-12-07 17:50:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on to get
+2025-12-07 17:50:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: anything on to get
+2025-12-07 17:50:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: how to do
+2025-12-07 17:50:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: how to do
+2025-12-07 17:50:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what you did
+2025-12-07 17:50:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what you did
+2025-12-07 17:50:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what you did
+2025-12-07 17:50:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what you did
+2025-12-07 17:50:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: what you did
+2025-12-07 17:50:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't
+2025-12-07 17:50:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't
+2025-12-07 17:50:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't
+2025-12-07 17:50:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't
+2025-12-07 17:50:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't
+2025-12-07 17:50:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't
+2025-12-07 17:50:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't do
+2025-12-07 17:50:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't do
+2025-12-07 17:50:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't do
+2025-12-07 17:50:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: those who didn't do
+2025-12-07 17:50:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: those who didn't do
+2025-12-07 17:50:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening
+2025-12-07 17:50:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening
+2025-12-07 17:50:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening will
+2025-12-07 17:50:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with
+2025-12-07 17:50:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a
+2025-12-07 17:50:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a
+2025-12-07 17:50:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listen well if you would indicate
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen two
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen two
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen to
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen to
+2025-12-07 17:50:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: listening to help you with a new eighteen to
+2025-12-07 17:50:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: you're listening to you with a new eighteen two
+2025-12-07 17:50:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:50:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:50:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:50:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: feet of these the giant you
+2025-12-07 17:50:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: feet of these the giant you
+2025-12-07 17:50:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: feet of these the giant you
+2025-12-07 17:50:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: feet of these the giant you
+2025-12-07 17:50:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: feet of these the giant you
+2025-12-07 17:50:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: feet of these the giant you
+2025-12-07 17:50:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on tuesday
+2025-12-07 17:50:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on tuesday
+2025-12-07 17:50:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on the subject
+2025-12-07 17:50:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on the subject
+2025-12-07 17:50:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on the subject
+2025-12-07 17:50:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on the subject
+2025-12-07 17:50:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on the subject
+2025-12-07 17:50:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: on the subject
+2025-12-07 17:50:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: on the subject
+2025-12-07 17:50:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well
+2025-12-07 17:50:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well
+2025-12-07 17:50:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well
+2025-12-07 17:50:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is
+2025-12-07 17:50:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a
+2025-12-07 17:50:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a
+2025-12-07 17:50:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this isn't everything
+2025-12-07 17:50:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things and
+2025-12-07 17:50:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things and
+2025-12-07 17:50:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things and
+2025-12-07 17:50:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things in the
+2025-12-07 17:50:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things in the senate
+2025-12-07 17:50:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things in the senate
+2025-12-07 17:50:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things in the senate is
+2025-12-07 17:50:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things in the senate isn't the first
+2025-12-07 17:50:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things in the senate isn't the first
+2025-12-07 17:50:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well this is a new things in the senate is
+2025-12-07 17:50:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: it's about this is a new things in the senate isn't
+2025-12-07 17:50:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hello
+2025-12-07 17:50:23 - io_audio.streaming_recorder - INFO - ✅ 在部分结果中检测到唤醒词 'hello'
+2025-12-07 17:50:23 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词 'hello'
+2025-12-07 17:50:23 - core.app - INFO - 🔔 唤醒词检测回调被触发
+2025-12-07 17:50:23 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词，准备开始识别...
+2025-12-07 17:50:23 - io_audio.streaming_recorder - INFO - 🔊 开始 Google 流式识别，请说话...
+2025-12-07 17:50:23 - core.app - INFO - 🎤 检测到唤醒词，切换到监听状态...
+2025-12-07 17:50:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> listening
+2025-12-07 17:50:28 - io_audio.streaming_recorder - INFO - ⏹️ 初始等待时间结束，未检测到语音，停止识别
+2025-12-07 17:50:28 - core.app - WARNING - ⏱️ 监听超时（5.0秒），未识别到语句，返回空闲状态
+2025-12-07 17:50:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: listening -> idle
+2025-12-07 17:50:28 - core.app - INFO - 🔄 未识别到内容，继续等待下一个唤醒词...
+2025-12-07 17:50:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-07 17:50:28 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-07 17:50:29 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-07 17:50:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i wouldn't
+2025-12-07 17:50:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i wouldn't
+2025-12-07 17:50:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: i wouldn't
+2025-12-07 17:50:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hello
+2025-12-07 17:50:34 - io_audio.streaming_recorder - INFO - ✅ 在部分结果中检测到唤醒词 'hello'
+2025-12-07 17:50:34 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词 'hello'
+2025-12-07 17:50:34 - core.app - INFO - 🔔 唤醒词检测回调被触发
+2025-12-07 17:50:34 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词，准备开始识别...
+2025-12-07 17:50:34 - io_audio.streaming_recorder - INFO - 🔊 开始 Google 流式识别，请说话...
+2025-12-07 17:50:34 - core.app - INFO - 🎤 检测到唤醒词，切换到监听状态...
+2025-12-07 17:50:34 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> listening
+2025-12-07 17:50:39 - core.app - WARNING - ⏱️ 监听超时（5.0秒），未识别到语句，返回空闲状态
+2025-12-07 17:50:39 - ui.ui_manager - INFO - 🔄 切换 UI 模式: listening -> idle
+2025-12-07 17:50:39 - io_audio.streaming_recorder - INFO - ⏹️ 初始等待时间结束，未检测到语音，停止识别
+2025-12-07 17:50:39 - core.app - INFO - 🔄 未识别到内容，继续等待下一个唤醒词...
+2025-12-07 17:50:39 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-07 17:50:39 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-07 17:50:39 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-07 17:50:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: trump
+2025-12-07 17:50:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: trump junior
+2025-12-07 17:50:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: trump junior
+2025-12-07 17:50:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: trump junior
+2025-12-07 17:50:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: trump junior don't
+2025-12-07 17:50:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: trump junior don't
+2025-12-07 17:50:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: trump junior don't
+2025-12-07 17:50:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: trump junior death
+2025-12-07 17:50:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:50:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the number that
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the number thirteen
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the number thirteen
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the number thirteen years
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the number thirteen years
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the number thirteen years
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the number thirteen years
+2025-12-07 17:50:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the number thirteen years
+2025-12-07 17:50:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: who
+2025-12-07 17:50:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: reviewer
+2025-12-07 17:50:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: reviewer
+2025-12-07 17:50:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through two or three
+2025-12-07 17:50:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through two thousand
+2025-12-07 17:50:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through two thousand
+2025-12-07 17:50:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital
+2025-12-07 17:50:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you
+2025-12-07 17:50:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't
+2025-12-07 17:50:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't
+2025-12-07 17:50:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't
+2025-12-07 17:50:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't
+2025-12-07 17:50:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't
+2025-12-07 17:50:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't have to do
+2025-12-07 17:50:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't have to do
+2025-12-07 17:50:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't have to do
+2025-12-07 17:50:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't have to do the
+2025-12-07 17:50:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't have to do with
+2025-12-07 17:50:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: through to the hospital you don't have to do with
+2025-12-07 17:50:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: through to the hospital you have to do the autism
+2025-12-07 17:50:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: notorious
+2025-12-07 17:50:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no to
+2025-12-07 17:50:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no to
+2025-12-07 17:50:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no to
+2025-12-07 17:50:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: no tweezers
+2025-12-07 17:50:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have a
+2025-12-07 17:50:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have
+2025-12-07 17:50:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have
+2025-12-07 17:51:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: one hundred
+2025-12-07 17:51:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have done
+2025-12-07 17:51:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have done
+2025-12-07 17:51:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have done
+2025-12-07 17:51:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have gone down
+2025-12-07 17:51:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have gone down
+2025-12-07 17:51:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have been dealt with
+2025-12-07 17:51:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have been dealt with your team
+2025-12-07 17:51:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have been dealt with your team
+2025-12-07 17:51:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have been dealt with your team
+2025-12-07 17:51:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should have been dealt with your team
+2025-12-07 17:51:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: should have been dealt with your team
+2025-12-07 17:51:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:51:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:51:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not
+2025-12-07 17:51:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not
+2025-12-07 17:51:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not include
+2025-12-07 17:51:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not include
+2025-12-07 17:51:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles
+2025-12-07 17:51:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles
+2025-12-07 17:51:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles
+2025-12-07 17:51:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles
+2025-12-07 17:51:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles thousand
+2025-12-07 17:51:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles thousand
+2025-12-07 17:51:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a
+2025-12-07 17:51:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team this
+2025-12-07 17:51:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil
+2025-12-07 17:51:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil
+2025-12-07 17:51:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil
+2025-12-07 17:51:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil
+2025-12-07 17:51:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil
+2025-12-07 17:51:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil couple blocks
+2025-12-07 17:51:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on the
+2025-12-07 17:51:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on the
+2025-12-07 17:51:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on the went
+2025-12-07 17:51:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on that one funding
+2025-12-07 17:51:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on that one funding
+2025-12-07 17:51:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on that one funding
+2025-12-07 17:51:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on the went hunting with
+2025-12-07 17:51:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on the went hunting with
+2025-12-07 17:51:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on the went hunting with
+2025-12-07 17:51:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what we're not in los angeles has a team the civil help will be on the went hunting dogs
+2025-12-07 17:51:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: what we're not in los angeles has a team the civil help will be on the went hunting with a dog
+2025-12-07 17:51:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: without
+2025-12-07 17:51:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: with
+2025-12-07 17:51:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: with
+2025-12-07 17:51:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: without
+2025-12-07 17:51:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: without
+2025-12-07 17:51:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: without
+2025-12-07 17:51:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: what on earth
+2025-12-07 17:51:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: or not
+2025-12-07 17:51:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know
+2025-12-07 17:51:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know
+2025-12-07 17:51:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know
+2025-12-07 17:51:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know
+2025-12-07 17:51:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know
+2025-12-07 17:51:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you know
+2025-12-07 17:51:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: not enough for them
+2025-12-07 17:51:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you
+2025-12-07 17:51:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you
+2025-12-07 17:51:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you
+2025-12-07 17:51:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you
+2025-12-07 17:51:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: you know
+2025-12-07 17:51:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to to me
+2025-12-07 17:51:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two
+2025-12-07 17:51:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two
+2025-12-07 17:51:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two tremendous
+2025-12-07 17:51:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two tremendous
+2025-12-07 17:51:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two tremendous
+2025-12-07 17:51:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two tremendous
+2025-12-07 17:51:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: to tremendous
+2025-12-07 17:51:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during
+2025-12-07 17:51:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during
+2025-12-07 17:51:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner
+2025-12-07 17:51:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner another
+2025-12-07 17:51:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner another
+2025-12-07 17:51:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner another
+2025-12-07 17:51:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner another know
+2025-12-07 17:51:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner another know
+2025-12-07 17:51:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner another know
+2025-12-07 17:51:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: during dinner another know
+2025-12-07 17:51:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: during dinner another know
+2025-12-07 17:51:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you
+2025-12-07 17:51:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you
+2025-12-07 17:51:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you don't have the
+2025-12-07 17:51:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you don't have the
+2025-12-07 17:51:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you don't have the
+2025-12-07 17:51:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you don't have the
+2025-12-07 17:51:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you don't have the
+2025-12-07 17:51:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the show you don't have the
+2025-12-07 17:51:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the show you don't have the
+2025-12-07 17:51:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone
+2025-12-07 17:51:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone
+2025-12-07 17:51:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone
+2025-12-07 17:51:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for
+2025-12-07 17:51:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for
+2025-12-07 17:51:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for
+2025-12-07 17:51:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for roger
+2025-12-07 17:51:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for roger
+2025-12-07 17:51:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for roger who i
+2025-12-07 17:51:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for roger who i
+2025-12-07 17:51:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for roger who i
+2025-12-07 17:51:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: should be alone for roger who i
+2025-12-07 17:51:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: should be alone for roger who i
+2025-12-07 17:51:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:51:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:51:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i don't
+2025-12-07 17:51:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i don't
+2025-12-07 17:51:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i don't
+2025-12-07 17:51:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: sen
+2025-12-07 17:51:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:51:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:51:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:51:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top
+2025-12-07 17:51:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top
+2025-12-07 17:51:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top
+2025-12-07 17:51:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top
+2025-12-07 17:51:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to do
+2025-12-07 17:51:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal
+2025-12-07 17:51:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal
+2025-12-07 17:51:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to them
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for pushing
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for pushing
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young
+2025-12-07 17:51:36 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young
+2025-12-07 17:51:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young
+2025-12-07 17:51:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young
+2025-12-07 17:51:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again
+2025-12-07 17:51:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again
+2025-12-07 17:51:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again
+2025-12-07 17:51:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young
+2025-12-07 17:51:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again shouldn't
+2025-12-07 17:51:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again shouldn't
+2025-12-07 17:51:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again shouldn't
+2025-12-07 17:51:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again shouldn't
+2025-12-07 17:51:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the top had to the deal to london for for some young again shouldn't
+2025-12-07 17:51:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the have had to the deal to london for some young again shoes
+2025-12-07 17:51:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: so
+2025-12-07 17:51:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he sounds
+2025-12-07 17:51:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he sounds
+2025-12-07 17:51:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: doesn't do
+2025-12-07 17:51:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the
+2025-12-07 17:51:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the
+2025-12-07 17:51:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the
+2025-12-07 17:51:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the
+2025-12-07 17:51:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current
+2025-12-07 17:51:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current
+2025-12-07 17:51:47 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:51:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the
+2025-12-07 17:51:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team
+2025-12-07 17:51:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team
+2025-12-07 17:51:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team
+2025-12-07 17:51:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team a lot of
+2025-12-07 17:51:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team a lot of
+2025-12-07 17:51:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team so
+2025-12-07 17:51:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team so
+2025-12-07 17:51:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team so
+2025-12-07 17:51:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team a lot of sudan
+2025-12-07 17:51:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: because it is under the current team a lot of sudan
+2025-12-07 17:51:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: because it is under the current team a lot of sudan
+2025-12-07 17:51:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: not at
+2025-12-07 17:51:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: not at
+2025-12-07 17:51:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: not
+2025-12-07 17:51:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no idea
+2025-12-07 17:51:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no idea
+2025-12-07 17:51:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no idea
+2025-12-07 17:51:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: not idea
+2025-12-07 17:51:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: okay
+2025-12-07 17:51:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the obama
+2025-12-07 17:51:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: elop
+2025-12-07 17:51:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: elop
+2025-12-07 17:51:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: elop will you
+2025-12-07 17:51:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: elop what are you going on
+2025-12-07 17:51:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: elop what are you going on
+2025-12-07 17:51:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: elop what are you going on
+2025-12-07 17:51:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: elop what are you going on
+2025-12-07 17:52:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: elop what are you going on
+2025-12-07 17:52:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're
+2025-12-07 17:52:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're
+2025-12-07 17:52:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're canadian
+2025-12-07 17:52:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: where's your name
+2025-12-07 17:52:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: where's your name
+2025-12-07 17:52:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: where's your name
+2025-12-07 17:52:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: where's your name
+2025-12-07 17:52:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it says you
+2025-12-07 17:52:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it says
+2025-12-07 17:52:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it says
+2025-12-07 17:52:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it is important
+2025-12-07 17:52:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's as important as a
+2025-12-07 17:52:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's as important as a teenager
+2025-12-07 17:52:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's as important as a teenager
+2025-12-07 17:52:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what it says report wizard
+2025-12-07 17:52:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's as important as i said
+2025-12-07 17:52:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's as important as i said
+2025-12-07 17:52:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: what it says report wizard
+2025-12-07 17:52:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:52:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:52:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was
+2025-12-07 17:52:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was a
+2025-12-07 17:52:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was going to
+2025-12-07 17:52:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was going to
+2025-12-07 17:52:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was at the top
+2025-12-07 17:52:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was at the top
+2025-12-07 17:52:08 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:52:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was at the top
+2025-12-07 17:52:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the schools was at the top
+2025-12-07 17:52:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the schools was a top
+2025-12-07 17:52:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he said
+2025-12-07 17:52:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two centuries
+2025-12-07 17:52:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: two centuries
+2025-12-07 17:52:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: this entry
+2025-12-07 17:52:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: this entry
+2025-12-07 17:52:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: this entry
+2025-12-07 17:52:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: this entry
+2025-12-07 17:52:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the century
+2025-12-07 17:52:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: show me
+2025-12-07 17:52:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: show me
+2025-12-07 17:52:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: show me
+2025-12-07 17:52:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: show me
+2025-12-07 17:52:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: show me
+2025-12-07 17:52:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: show me
+2025-12-07 17:52:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: gertrude
+2025-12-07 17:52:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: gertrude
+2025-12-07 17:52:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: as a community
+2025-12-07 17:52:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: magic mirror
+2025-12-07 17:52:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: magic mirror
+2025-12-07 17:52:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: magic mirror
+2025-12-07 17:52:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: magic mirror
+2025-12-07 17:52:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: tell me
+2025-12-07 17:52:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: jay leno show
+2025-12-07 17:52:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: jay leno show
+2025-12-07 17:52:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: jay leno show
+2025-12-07 17:52:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: jay leno show
+2025-12-07 17:52:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: jay leno show
+2025-12-07 17:52:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: jay leno show
+2025-12-07 17:52:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:52:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:52:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:52:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the day that
+2025-12-07 17:52:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the day that
+2025-12-07 17:52:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to
+2025-12-07 17:52:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to push as
+2025-12-07 17:52:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to push as the
+2025-12-07 17:52:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to push as the
+2025-12-07 17:52:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to push as the
+2025-12-07 17:52:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to push as the
+2025-12-07 17:52:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to push as the
+2025-12-07 17:52:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the data to push as the
+2025-12-07 17:52:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the data to push as the
+2025-12-07 17:52:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he didn't
+2025-12-07 17:52:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he didn't
+2025-12-07 17:52:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read and
+2025-12-07 17:52:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read and then
+2025-12-07 17:52:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read and then
+2025-12-07 17:52:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read and then
+2025-12-07 17:52:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read and then get
+2025-12-07 17:52:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read and then
+2025-12-07 17:52:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read and then
+2025-12-07 17:52:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read in that direction with
+2025-12-07 17:52:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read in that direction
+2025-12-07 17:52:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read in that direction
+2025-12-07 17:52:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: did he did read in that direction visitors center
+2025-12-07 17:52:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: did he did read in that direction
+2025-12-07 17:52:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when
+2025-12-07 17:52:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: from
+2025-12-07 17:52:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: from
+2025-12-07 17:52:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: weber from
+2025-12-07 17:52:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: weber from was
+2025-12-07 17:52:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: weber from was
+2025-12-07 17:52:37 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when you know from watching
+2025-12-07 17:52:37 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:52:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: weber from was in
+2025-12-07 17:52:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: weber from was in
+2025-12-07 17:52:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when you know from watching the
+2025-12-07 17:52:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when you know from watching the
+2025-12-07 17:52:38 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when you know from watching the
+2025-12-07 17:52:39 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: when from watching clear
+2025-12-07 17:52:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no choice
+2025-12-07 17:52:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no choice
+2025-12-07 17:52:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: watch what happens
+2025-12-07 17:52:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: natural water from
+2025-12-07 17:52:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: natural water from
+2025-12-07 17:52:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: watch what have forgotten
+2025-12-07 17:52:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: natural water conservation
+2025-12-07 17:52:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: natural water conservation
+2025-12-07 17:52:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: natural water from cancer
+2025-12-07 17:52:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: natural water from cancer
+2025-12-07 17:52:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator
+2025-12-07 17:52:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator to
+2025-12-07 17:52:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator to
+2025-12-07 17:52:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator to the by
+2025-12-07 17:52:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i
+2025-12-07 17:52:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for
+2025-12-07 17:52:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for
+2025-12-07 17:52:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator to the by the federal
+2025-12-07 17:52:43 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:52:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for his and
+2025-12-07 17:52:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for his and
+2025-12-07 17:52:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for his and
+2025-12-07 17:52:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for his and i
+2025-12-07 17:52:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for his and i
+2025-12-07 17:52:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for his and i
+2025-12-07 17:52:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senator today but i paid for his and i
+2025-12-07 17:52:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: senator today but i paid for his and i
+2025-12-07 17:52:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: anybody
+2025-12-07 17:52:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: anybody
+2025-12-07 17:52:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: anybody
+2025-12-07 17:52:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: anybody
+2025-12-07 17:52:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what
+2025-12-07 17:52:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: would you evaluate
+2025-12-07 17:52:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what did he bought it on
+2025-12-07 17:52:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what did he bought it on
+2025-12-07 17:52:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what did he bought it on
+2025-12-07 17:52:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what did he bought it on
+2025-12-07 17:52:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what did he bought it on
+2025-12-07 17:52:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: what did he bought it on
+2025-12-07 17:52:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: what didn't he bought it on
+2025-12-07 17:52:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when
+2025-12-07 17:52:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when
+2025-12-07 17:52:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when
+2025-12-07 17:52:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when
+2025-12-07 17:52:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when
+2025-12-07 17:52:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: when
+2025-12-07 17:52:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: them
+2025-12-07 17:53:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: getting
+2025-12-07 17:53:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: getting a
+2025-12-07 17:53:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hurting you
+2025-12-07 17:53:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hurting you
+2025-12-07 17:53:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hurting you know the
+2025-12-07 17:53:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hurting you know the most
+2025-12-07 17:53:01 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hurting you know the most
+2025-12-07 17:53:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: hurting you know
+2025-12-07 17:53:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the
+2025-12-07 17:53:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the for
+2025-12-07 17:53:02 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the for
+2025-12-07 17:53:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the for that
+2025-12-07 17:53:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the for that matter
+2025-12-07 17:53:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the for that matter
+2025-12-07 17:53:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the for that matter
+2025-12-07 17:53:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: to the for that long
+2025-12-07 17:53:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel
+2025-12-07 17:53:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel
+2025-12-07 17:53:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel
+2025-12-07 17:53:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel
+2025-12-07 17:53:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel
+2025-12-07 17:53:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel
+2025-12-07 17:53:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to go to
+2025-12-07 17:53:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to go to
+2025-12-07 17:53:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to go to
+2025-12-07 17:53:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to go to
+2025-12-07 17:53:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to go to
+2025-12-07 17:53:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to get him to
+2025-12-07 17:53:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to get him to
+2025-12-07 17:53:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to get him to visit him in
+2025-12-07 17:53:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to get him to visit him in
+2025-12-07 17:53:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to get him to visit him in
+2025-12-07 17:53:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to get him to visit him in
+2025-12-07 17:53:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: chanel to get him to visit him in
+2025-12-07 17:53:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: chanel to go to see his email
+2025-12-07 17:53:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to determine
+2025-12-07 17:53:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to determine
+2025-12-07 17:53:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym your
+2025-12-07 17:53:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym
+2025-12-07 17:53:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym
+2025-12-07 17:53:09 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym
+2025-12-07 17:53:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency
+2025-12-07 17:53:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency
+2025-12-07 17:53:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency
+2025-12-07 17:53:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency
+2025-12-07 17:53:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency
+2025-12-07 17:53:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency
+2025-12-07 17:53:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency of
+2025-12-07 17:53:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency of
+2025-12-07 17:53:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency of
+2025-12-07 17:53:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to the gym efficiency of
+2025-12-07 17:53:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: to the gym efficiency of
+2025-12-07 17:53:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: love
+2025-12-07 17:53:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: love
+2025-12-07 17:53:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that's true
+2025-12-07 17:53:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: traditional
+2025-12-07 17:53:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: traditional
+2025-12-07 17:53:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: traditional
+2025-12-07 17:53:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: traditional
+2025-12-07 17:53:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: traditional
+2025-12-07 17:53:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:53:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:53:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i would
+2025-12-07 17:53:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i would
+2025-12-07 17:53:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i would
+2025-12-07 17:53:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some
+2025-12-07 17:53:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i would not be
+2025-12-07 17:53:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i would not be
+2025-12-07 17:53:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some of the
+2025-12-07 17:53:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some a
+2025-12-07 17:53:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some a lot
+2025-12-07 17:53:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some a lot
+2025-12-07 17:53:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some i do not think
+2025-12-07 17:53:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some a lot
+2025-12-07 17:53:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: want some a lot
+2025-12-07 17:53:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: i want some a lot
+2025-12-07 17:53:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:53:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:53:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the health
+2025-12-07 17:53:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the hoping she'll
+2025-12-07 17:53:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the hoping she'll
+2025-12-07 17:53:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the hoping she'll
+2025-12-07 17:53:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the hoping she'll
+2025-12-07 17:53:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the hoping she'll
+2025-12-07 17:53:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the hoping she'll
+2025-12-07 17:53:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: way to
+2025-12-07 17:53:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: way to
+2025-12-07 17:53:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: way to
+2025-12-07 17:53:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: way to
+2025-12-07 17:53:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: way to
+2025-12-07 17:53:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: way too
+2025-12-07 17:53:25 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:53:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:53:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york
+2025-12-07 17:53:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york
+2025-12-07 17:53:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york so it
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york so it
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york's hour drama
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york's hour drama
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the new york's hour drama
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the new york's hour drama
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: a
+2025-12-07 17:53:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: a
+2025-12-07 17:53:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well in the
+2025-12-07 17:53:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well in the cold in the
+2025-12-07 17:53:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: well in the cold in the
+2025-12-07 17:53:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the gonna do
+2025-12-07 17:53:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the gonna do
+2025-12-07 17:53:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the gonna do
+2025-12-07 17:53:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the gonna do
+2025-12-07 17:53:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: in the comment do
+2025-12-07 17:53:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: same thing for me
+2025-12-07 17:53:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: same thing for me
+2025-12-07 17:53:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: same thing for me
+2025-12-07 17:53:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: same thing for me
+2025-12-07 17:53:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: same thing for me
+2025-12-07 17:53:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: same thing for me
+2025-12-07 17:53:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: thornton
+2025-12-07 17:53:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: thornton
+2025-12-07 17:53:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: forcing them
+2025-12-07 17:53:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: phones in december
+2025-12-07 17:53:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: phones in december
+2025-12-07 17:53:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: thornton has implemented
+2025-12-07 17:53:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: phones in december
+2025-12-07 17:53:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: phones in december
+2025-12-07 17:53:36 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: phones in december
+2025-12-07 17:53:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no
+2025-12-07 17:53:40 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:53:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no
+2025-12-07 17:53:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no middle
+2025-12-07 17:53:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no middle
+2025-12-07 17:53:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no middle
+2025-12-07 17:53:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no middle
+2025-12-07 17:53:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no middle
+2025-12-07 17:53:41 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no middle
+2025-12-07 17:53:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: no middle
+2025-12-07 17:53:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's
+2025-12-07 17:53:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's
+2025-12-07 17:53:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's really
+2025-12-07 17:53:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's really
+2025-12-07 17:53:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's really
+2025-12-07 17:53:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's really show
+2025-12-07 17:53:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's really show
+2025-12-07 17:53:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's really show
+2025-12-07 17:53:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's really show
+2025-12-07 17:53:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: he's really show
+2025-12-07 17:53:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: one
+2025-12-07 17:53:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: one
+2025-12-07 17:53:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: one
+2025-12-07 17:53:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: one
+2025-12-07 17:53:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: one
+2025-12-07 17:53:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: whoa
+2025-12-07 17:53:51 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:53:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying
+2025-12-07 17:53:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit
+2025-12-07 17:53:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit
+2025-12-07 17:53:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit
+2025-12-07 17:53:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit doing
+2025-12-07 17:53:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit doing
+2025-12-07 17:53:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit doing
+2025-12-07 17:53:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit doing or
+2025-12-07 17:53:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit doing or attempted
+2025-12-07 17:53:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit doing or attempted
+2025-12-07 17:53:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit attempt
+2025-12-07 17:53:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit attempt
+2025-12-07 17:53:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're trying to quit attempt
+2025-12-07 17:53:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: you're trying to quit doing your job
+2025-12-07 17:53:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them
+2025-12-07 17:53:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them
+2025-12-07 17:53:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them
+2025-12-07 17:53:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them
+2025-12-07 17:53:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them
+2025-12-07 17:53:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them
+2025-12-07 17:53:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and over
+2025-12-07 17:53:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and over the
+2025-12-07 17:53:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and over the
+2025-12-07 17:53:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and over the
+2025-12-07 17:53:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and over the
+2025-12-07 17:53:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and over the
+2025-12-07 17:53:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: get them into the does and over the
+2025-12-07 17:53:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: get them into the does and over the
+2025-12-07 17:53:59 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:54:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:54:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:54:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:54:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general
+2025-12-07 17:54:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general
+2025-12-07 17:54:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general
+2025-12-07 17:54:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general trying
+2025-12-07 17:54:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general chang when
+2025-12-07 17:54:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general chang when
+2025-12-07 17:54:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general chang when your
+2025-12-07 17:54:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general chang when your
+2025-12-07 17:54:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general chang when your
+2025-12-07 17:54:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the general chang when your
+2025-12-07 17:54:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the general chang will ya
+2025-12-07 17:54:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's
+2025-12-07 17:54:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's
+2025-12-07 17:54:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's where you
+2025-12-07 17:54:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's where you to
+2025-12-07 17:54:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's where you to
+2025-12-07 17:54:10 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's where you to
+2025-12-07 17:54:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's where you to
+2025-12-07 17:54:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it's where you to
+2025-12-07 17:54:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: it's where you too
+2025-12-07 17:54:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there
+2025-12-07 17:54:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also
+2025-12-07 17:54:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also
+2025-12-07 17:54:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: these are
+2025-12-07 17:54:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also
+2025-12-07 17:54:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also
+2025-12-07 17:54:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also
+2025-12-07 17:54:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: these are sharing from
+2025-12-07 17:54:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should
+2025-12-07 17:54:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should
+2025-12-07 17:54:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should
+2025-12-07 17:54:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: these are sharing from she options were
+2025-12-07 17:54:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: these are sharing from she options were
+2025-12-07 17:54:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well
+2025-12-07 17:54:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well
+2025-12-07 17:54:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well
+2025-12-07 17:54:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine yes i
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine yes i
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine vs on
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine vs on
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine vs on
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine vs on
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: is there is also known should serve you well nine vs on
+2025-12-07 17:54:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: these are sharon from snow should serve you well nine a child
+2025-12-07 17:54:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on
+2025-12-07 17:54:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on
+2025-12-07 17:54:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on the
+2025-12-07 17:54:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on the other
+2025-12-07 17:54:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on the other
+2025-12-07 17:54:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on the other nine
+2025-12-07 17:54:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on the other nine
+2025-12-07 17:54:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on the other nine
+2025-12-07 17:54:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he's on the other nine
+2025-12-07 17:54:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: he's on the other nine
+2025-12-07 17:54:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: one
+2025-12-07 17:54:21 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:54:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: yeah
+2025-12-07 17:54:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: and then why
+2025-12-07 17:54:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: and then why
+2025-12-07 17:54:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: and then why shouldn't
+2025-12-07 17:54:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: a while
+2025-12-07 17:54:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charging
+2025-12-07 17:54:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charging
+2025-12-07 17:54:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting
+2025-12-07 17:54:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo
+2025-12-07 17:54:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo
+2025-12-07 17:54:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no
+2025-12-07 17:54:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of
+2025-12-07 17:54:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of
+2025-12-07 17:54:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to
+2025-12-07 17:54:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of was running
+2025-12-07 17:54:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the
+2025-12-07 17:54:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the
+2025-12-07 17:54:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to wanting to deal with
+2025-12-07 17:54:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the open
+2025-12-07 17:54:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the open
+2025-12-07 17:54:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the open when
+2025-12-07 17:54:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the open wanting to
+2025-12-07 17:54:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the open wanting to
+2025-12-07 17:54:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the open wanting to
+2025-12-07 17:54:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: charting photo no no of way to run into the open wanting to
+2025-12-07 17:54:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: charting photo no no of way to wanting to be been wanting the
+2025-12-07 17:54:31 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hello
+2025-12-07 17:54:31 - io_audio.streaming_recorder - INFO - ✅ 在部分结果中检测到唤醒词 'hello'
+2025-12-07 17:54:31 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词 'hello'
+2025-12-07 17:54:31 - core.app - INFO - 🔔 唤醒词检测回调被触发
+2025-12-07 17:54:31 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词，准备开始识别...
+2025-12-07 17:54:31 - io_audio.streaming_recorder - INFO - 🔊 开始 Google 流式识别，请说话...
+2025-12-07 17:54:31 - core.app - INFO - 🎤 检测到唤醒词，切换到监听状态...
+2025-12-07 17:54:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> listening
+2025-12-07 17:54:33 - io_audio.streaming_recorder - INFO - 📝 识别到句子: The end's home.
+2025-12-07 17:54:33 - io_audio.streaming_recorder - INFO - 💾 识别结果已保存: The end's home.
+2025-12-07 17:54:33 - io_audio.streaming_recorder - INFO - ✅ 识别到最终结果，停止识别流程
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 检测到识别结果: The end's home.，等待处理...
+2025-12-07 17:54:33 - core.app - INFO - ✅ 最终识别结果: The end's home.
+2025-12-07 17:54:33 - core.app - INFO - 🛑 监听任务已结束
+2025-12-07 17:54:33 - core.app - INFO - 🔍 开始意图识别...
+2025-12-07 17:54:33 - core.app - INFO - 💬 未识别到预定义动作，调用 LLM 生成回复...
+2025-12-07 17:54:33 - nlu.llm_client - INFO - 🤔 LLM 处理: The end's home....
+2025-12-07 17:54:34 - core.app - INFO - ✅ LLM 生成回复: The Mirror sees... the end's final home, now brigh...
+2025-12-07 17:54:34 - core.app - INFO - 💬 处理聊天回复...
+2025-12-07 17:54:34 - ui.ui_manager - INFO - 🔄 切换 UI 模式: listening -> talking
+2025-12-07 17:54:34 - tts.tts_client - INFO - 🔊 开始 TTS 合成: The Mirror sees... the end's final home, now brigh...
+2025-12-07 17:54:35 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:54:36 - core.app - INFO - 🔊 TTS 文件已生成...
+2025-12-07 17:54:36 - core.app - INFO - 📁 TTS 文件路径: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:54:36 - ui.ui_manager - INFO - 🔄 切换 UI 模式: talking -> talking
+2025-12-07 17:54:36 - core.app - INFO - ✅ TTS 文件已保存，大小: 152.54 KB
+2025-12-07 17:54:36 - core.app - INFO - 🎵 开始播放音频...
+2025-12-07 17:54:36 - io_audio.player - INFO - ▶️ 播放音频: /home/pi/MagicMirrorPro/temp/audio/tts_output.wav
+2025-12-07 17:54:39 - io_audio.player - INFO - ✅ 音频播放完成
+2025-12-07 17:54:39 - core.app - INFO - ✅ 音频播放完成，回到空闲状态
+2025-12-07 17:54:39 - ui.ui_manager - INFO - 🔄 切换 UI 模式: talking -> idle
+2025-12-07 17:54:39 - core.app - INFO - 🎤 后台开始监听，等待唤醒词（UI 保持空闲状态）...
+2025-12-07 17:54:39 - core.app - INFO - 🔄 开始持续监听循环...
+2025-12-07 17:54:39 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-07 17:54:40 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-07 17:54:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you will come
+2025-12-07 17:54:42 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you will come
+2025-12-07 17:54:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: we
+2025-12-07 17:54:43 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:54:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: we
+2025-12-07 17:54:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: we
+2025-12-07 17:54:43 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine
+2025-12-07 17:54:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine
+2025-12-07 17:54:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine hasidim
+2025-12-07 17:54:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine hasidim
+2025-12-07 17:54:44 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine hasidim
+2025-12-07 17:54:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine how can we
+2025-12-07 17:54:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine how can we
+2025-12-07 17:54:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine hasidim simple
+2025-12-07 17:54:45 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-07 17:54:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine hasidim simple you know
+2025-12-07 17:54:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the or can we imagine hasidim simple you know
+2025-12-07 17:54:46 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: or can we imagine hasidim simply with them
+2025-12-07 17:54:47 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: breaking
+2025-12-07 17:54:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: breaking so
+2025-12-07 17:54:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: breaking so
+2025-12-07 17:54:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: breaking so
+2025-12-07 17:54:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: breaking so
+2025-12-07 17:54:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: breaking so
+2025-12-07 17:54:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: breaking so
+2025-12-07 17:54:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: come charging
+2025-12-07 17:54:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: come charging
+2025-12-07 17:54:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with
+2025-12-07 17:54:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with
+2025-12-07 17:54:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with
+2025-12-07 17:54:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that
+2025-12-07 17:54:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we
+2025-12-07 17:54:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we
+2025-12-07 17:54:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that's how we feel
+2025-12-07 17:54:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we still have
+2025-12-07 17:54:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we still have
+2025-12-07 17:54:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for
+2025-12-07 17:54:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for
+2025-12-07 17:54:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for any of the
+2025-12-07 17:54:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for any of the
+2025-12-07 17:54:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for any of them
+2025-12-07 17:54:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for anybody to know
+2025-12-07 17:54:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for anybody to know
+2025-12-07 17:54:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for anybody to know
+2025-12-07 17:54:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for anybody to know what
+2025-12-07 17:54:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for anybody to know what
+2025-12-07 17:54:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for anybody to know what
+2025-12-07 17:54:53 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: concerned with that we can hope for anybody to know what
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: concerned with that we see hope for any of the a ton of with
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no doubt
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no doubt
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no doubt
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: no doubt
+2025-12-07 17:54:54 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: no doubt
+2025-12-07 17:54:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can
+2025-12-07 17:54:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can
+2025-12-07 17:54:55 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: you can
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i don't
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're going to
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're going to the
+2025-12-07 17:54:56 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're going to the
+2025-12-07 17:54:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're going to
+2025-12-07 17:54:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're going to the matter
+2025-12-07 17:54:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you're going to the matter
+2025-12-07 17:54:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: you're going to the matter
+2025-12-07 17:54:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:54:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that sounded
+2025-12-07 17:54:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that sounded
+2025-12-07 17:54:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that sounded
+2025-12-07 17:54:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that sounded
+2025-12-07 17:54:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: some it
+2025-12-07 17:54:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that's
+2025-12-07 17:54:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i tell
+2025-12-07 17:54:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: i tell
+2025-12-07 17:54:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that
+2025-12-07 17:55:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the telephone fundraising
+2025-12-07 17:55:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the telephone
+2025-12-07 17:55:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the telephone
+2025-12-07 17:55:00 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the telephone
+2025-12-07 17:55:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: so
+2025-12-07 17:55:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: so
+2025-12-07 17:55:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: so
+2025-12-07 17:55:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the so
+2025-12-07 17:55:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: some
+2025-12-07 17:55:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: some trees from
+2025-12-07 17:55:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: some trees from
+2025-12-07 17:55:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: some trees from
+2025-12-07 17:55:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: some trees from
+2025-12-07 17:55:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: some trees from
+2025-12-07 17:55:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: some trees from
+2025-12-07 17:55:06 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: some trees him
+2025-12-07 17:55:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:55:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:55:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:55:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the usual
+2025-12-07 17:55:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the you should
+2025-12-07 17:55:07 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the you should
+2025-12-07 17:55:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the you should
+2025-12-07 17:55:08 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the dealership
+2025-12-07 17:55:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: shouldn't you
+2025-12-07 17:55:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: shouldn't you
+2025-12-07 17:55:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: senate majority
+2025-12-07 17:55:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are
+2025-12-07 17:55:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are
+2025-12-07 17:55:11 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should be
+2025-12-07 17:55:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are shouldn't
+2025-12-07 17:55:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are shouldn't
+2025-12-07 17:55:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should
+2025-12-07 17:55:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be
+2025-12-07 17:55:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a for me
+2025-12-07 17:55:12 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a for me
+2025-12-07 17:55:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little
+2025-12-07 17:55:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little
+2025-12-07 17:55:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little
+2025-12-07 17:55:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little
+2025-12-07 17:55:13 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little
+2025-12-07 17:55:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little
+2025-12-07 17:55:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little charges
+2025-12-07 17:55:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little charges
+2025-12-07 17:55:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: humans are should you should be a fun little charges
+2025-12-07 17:55:14 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: humans are should you should be a fun little charges
+2025-12-07 17:55:15 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there is
+2025-12-07 17:55:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there is
+2025-12-07 17:55:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there is
+2025-12-07 17:55:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: it has to be
+2025-12-07 17:55:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: president is trying
+2025-12-07 17:55:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: president is trying
+2025-12-07 17:55:16 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: president is trying
+2025-12-07 17:55:17 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: putting their is
+2025-12-07 17:55:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:55:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:55:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: fiona
+2025-12-07 17:55:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: fiona
+2025-12-07 17:55:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: fiona
+2025-12-07 17:55:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: fiona
+2025-12-07 17:55:18 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: fiona
+2025-12-07 17:55:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: fiona
+2025-12-07 17:55:19 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you
+2025-12-07 17:55:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can listen it's
+2025-12-07 17:55:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can listen
+2025-12-07 17:55:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can listen
+2025-12-07 17:55:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can listen to
+2025-12-07 17:55:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can listen to
+2025-12-07 17:55:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can listen to
+2025-12-07 17:55:20 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: you can listen to
+2025-12-07 17:55:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: you go missing a true
+2025-12-07 17:55:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: use
+2025-12-07 17:55:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: use through
+2025-12-07 17:55:21 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: use through
+2025-12-07 17:55:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: use your
+2025-12-07 17:55:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: use your shoe
+2025-12-07 17:55:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: use your shoe
+2025-12-07 17:55:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: use your shoe
+2025-12-07 17:55:22 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: use through issue
+2025-12-07 17:55:23 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: as i say that
+2025-12-07 17:55:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: as i say that i'm
+2025-12-07 17:55:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: as i say that i'm
+2025-12-07 17:55:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: as i say that i'm
+2025-12-07 17:55:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: as i say that i'm
+2025-12-07 17:55:24 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: i that
+2025-12-07 17:55:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the
+2025-12-07 17:55:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there should
+2025-12-07 17:55:26 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there should
+2025-12-07 17:55:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there should
+2025-12-07 17:55:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there should
+2025-12-07 17:55:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there should
+2025-12-07 17:55:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: there should
+2025-12-07 17:55:27 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: they should you
+2025-12-07 17:55:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacements
+2025-12-07 17:55:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacing the jehovah's
+2025-12-07 17:55:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacing wonderful
+2025-12-07 17:55:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacing wonderful
+2025-12-07 17:55:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacing wonderful
+2025-12-07 17:55:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacing wonderful
+2025-12-07 17:55:29 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacing wonderful
+2025-12-07 17:55:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: replacing wonderful
+2025-12-07 17:55:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: replacing wonderful
+2025-12-07 17:55:30 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to
+2025-12-07 17:55:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to
+2025-12-07 17:55:32 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to do one
+2025-12-07 17:55:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to do one
+2025-12-07 17:55:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to do one
+2025-12-07 17:55:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to do one
+2025-12-07 17:55:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to do one
+2025-12-07 17:55:33 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: to do one
+2025-12-07 17:55:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: to do one
+2025-12-07 17:55:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone
+2025-12-07 17:55:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone
+2025-12-07 17:55:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone
+2025-12-07 17:55:34 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone with a
+2025-12-07 17:55:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone else
+2025-12-07 17:55:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone else
+2025-12-07 17:55:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone else
+2025-12-07 17:55:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone else
+2025-12-07 17:55:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: someone else
+2025-12-07 17:55:35 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: someone else
+2025-12-07 17:55:39 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: researchers
+2025-12-07 17:55:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: researchers to
+2025-12-07 17:55:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: researchers to
+2025-12-07 17:55:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: researchers children
+2025-12-07 17:55:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: researchers children
+2025-12-07 17:55:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: researchers children
+2025-12-07 17:55:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: researchers children to
+2025-12-07 17:55:40 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: search children
+2025-12-07 17:55:45 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the
+2025-12-07 17:55:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: okay not
+2025-12-07 17:55:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: okay not
+2025-12-07 17:55:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: okay not
+2025-12-07 17:55:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: okay not
+2025-12-07 17:55:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: okay not
+2025-12-07 17:55:48 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: okay not
+2025-12-07 17:55:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: okay not okay
+2025-12-07 17:55:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why
+2025-12-07 17:55:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why the fuck
+2025-12-07 17:55:49 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why the fuck
+2025-12-07 17:55:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why the
+2025-12-07 17:55:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: light upon others
+2025-12-07 17:55:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: light upon others
+2025-12-07 17:55:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solution
+2025-12-07 17:55:50 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid
+2025-12-07 17:55:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid
+2025-12-07 17:55:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid
+2025-12-07 17:55:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid
+2025-12-07 17:55:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid somebody
+2025-12-07 17:55:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid somebody
+2025-12-07 17:55:51 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid somebody
+2025-12-07 17:55:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid somebody
+2025-12-07 17:55:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: why did another solid somebody
+2025-12-07 17:55:52 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: why did another solid somebody
+2025-12-07 17:55:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: another
+2025-12-07 17:55:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he'll continue
+2025-12-07 17:55:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he'll continue
+2025-12-07 17:55:57 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he'll continue
+2025-12-07 17:55:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he'll continue
+2025-12-07 17:55:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he'll continue
+2025-12-07 17:55:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: he'll continue
+2025-12-07 17:55:58 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: he'll continue
+2025-12-07 17:55:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the service
+2025-12-07 17:55:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the service
+2025-12-07 17:55:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the service
+2025-12-07 17:55:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the service
+2025-12-07 17:55:59 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: the service
+2025-12-07 17:56:03 - io_audio.streaming_recorder - INFO - 🔍 Vosk 完整结果: the service
+2025-12-07 17:56:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that
+2025-12-07 17:56:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that
+2025-12-07 17:56:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that neither
+2025-12-07 17:56:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that neither
+2025-12-07 17:56:04 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that neither shows the
+2025-12-07 17:56:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that neither shows the
+2025-12-07 17:56:05 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: that neither shows the
+2025-12-07 17:56:05 - core.app - INFO - ⌨️ 检测到空格键，退出程序...
+2025-12-07 17:56:05 - __main__ - INFO - ✅ 程序已退出

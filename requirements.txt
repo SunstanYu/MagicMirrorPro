@@ -1,0 +1,25 @@
+# 核心依赖
+pygame>=2.5.0
+numpy>=1.24.0
+soundfile>=0.12.0
+
+# Google ASR
+google-cloud-speech>=2.19.0
+
+# 音频处理
+pyaudio>=0.2.11
+
+# 本地 ASR (可选)
+vosk>=0.3.45
+
+# TTS (可选)
+gTTS>=2.4.0
+pyttsx3>=2.90
+
+# HTTP 请求 (用于 LLM API)
+requests>=2.31.0
+httpx>=0.24.0
+
+# 工具
+python-dotenv>=1.0.0
+

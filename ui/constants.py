@@ -1,0 +1,31 @@
+"""
+UI 常量定义
+"""
+import config
+
+# 窗口尺寸
+WINDOW_WIDTH = config.UI_WIDTH
+WINDOW_HEIGHT = config.UI_HEIGHT
+
+# 颜色定义
+COLOR_BG = config.UI_BG_COLOR
+COLOR_TEXT = config.UI_TEXT_COLOR
+COLOR_PRIMARY = (100, 150, 255)
+COLOR_SECONDARY = (255, 150, 100)
+COLOR_SUCCESS = (100, 255, 150)
+COLOR_WARNING = (255, 200, 100)
+COLOR_ERROR = (255, 100, 100)
+
+# 字体大小
+FONT_SIZE_LARGE = 32
+FONT_SIZE_MEDIUM = config.UI_FONT_SIZE
+FONT_SIZE_SMALL = 16
+
+# UI 模式
+MODE_IDLE = "idle"
+MODE_LISTENING = "listening"
+MODE_ACTION = "action"
+MODE_CHAT = "chat"
+MODE_NEWS = "news"
+MODE_TALKING = "talking"
+
