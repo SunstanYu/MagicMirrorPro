@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# 敏感文件 - API 密钥和凭证
+asr/*.json
+config.py
+*.key
+*.pem
+*.p12
+
+# 大文件 - TTS 模型
+tts/model/*.onnx
+tts/model/*.onnx.*
+
+# 临时文件
+temp/
+*.wav
+*.flac
+*.mp3
+*.mp4
+converted.wav
+recording.wav
+
+# 日志文件
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env
+.env.local
+
+# 测试输出
+test_output/
+*.test
+
