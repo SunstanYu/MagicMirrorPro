@@ -3,8 +3,8 @@
 """
 from typing import Optional
 from utils.logger import setup_logger
-import pygame
-import time
+import soundfile as sf
+import sounddevice as sd
 import os
 
 logger = setup_logger(__name__)
@@ -15,8 +15,6 @@ class AudioPlayer:
     
     def __init__(self):
         """初始化播放器"""
-        # 初始化 pygame mixer
-        pygame.mixer.init()
         self.is_playing = False
         logger.info("🔊 音频播放器已初始化")
     
@@ -36,15 +34,22 @@ class AudioPlayer:
         self.is_playing = True
         
         try:
-            # 加载音频文件
-            pygame.mixer.music.load(audio_path)
+            # 读取音频文件
+            data, samplerate = sf.read(audio_path)
+            
+            # 如果是立体声，转换为单声道
+            if len(data.shape) > 1:
+                data = data.mean(axis=1)
+            
+            # 0.7倍速播放：降低采样率
+            playback_rate = samplerate * 0.7
+            
             # 播放音频
-            pygame.mixer.music.play()
+            sd.play(data, samplerate=playback_rate)
             
             if blocking:
                 # 阻塞等待播放完成
-                while pygame.mixer.music.get_busy():
-                    time.sleep(0.1)
+                sd.wait()
                 logger.info("✅ 音频播放完成")
         except Exception as e:
             logger.error(f"❌ 播放音频失败: {e}", exc_info=True)
@@ -55,7 +60,7 @@ class AudioPlayer:
         """停止播放"""
         logger.info("⏹️ 停止播放")
         try:
-            pygame.mixer.music.stop()
+            sd.stop()
             logger.info("✅ 已停止播放")
         except Exception as e:
             logger.error(f"❌ 停止播放失败: {e}", exc_info=True)
@@ -69,5 +74,9 @@ class AudioPlayer:
         Returns:
             bool: 是否正在播放
         """
-        return self.is_playing or pygame.mixer.music.get_busy()
+        try:
+            # sounddevice 没有直接的方法检查播放状态，使用 is_playing 标志
+            return self.is_playing
+        except Exception:
+            return False
 

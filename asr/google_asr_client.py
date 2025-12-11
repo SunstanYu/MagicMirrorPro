@@ -20,7 +20,7 @@ class GoogleASRClient:
         try:
             self.client = speech.SpeechClient.from_service_account_file(self.credentials_path)
         except:
-        self.client = speech.SpeechClient.from_service_account_json(self.credentials_path)
+            self.client = speech.SpeechClient.from_service_account_json(self.credentials_path)
     
     def transcribe(self, audio_path: str, language_code: str = "en-US") -> ASRResult:
         """转写音频文件"""

@@ -4,12 +4,12 @@ UI 管理器 - 管理不同 UI 场景的切换和更新
 import threading
 import pygame
 from typing import Optional, Dict, Any
-from ui.screens import BaseScreen, IdleScreen, ListeningScreen, ActionScreen, NewsScreen, TalkingScreen
+from ui.screens import BaseScreen, IdleScreen, ListeningScreen, ThinkingScreen, ActionScreen, NewsScreen, TalkingScreen, CallingScreen, MusicScreen
 from ui.constants import (
     WINDOW_WIDTH, WINDOW_HEIGHT, COLOR_BG, COLOR_TEXT, COLOR_PRIMARY,
     COLOR_SECONDARY, COLOR_SUCCESS, COLOR_WARNING, COLOR_ERROR,
     FONT_SIZE_LARGE, FONT_SIZE_MEDIUM, FONT_SIZE_SMALL,
-    MODE_IDLE, MODE_LISTENING, MODE_ACTION, MODE_CHAT, MODE_NEWS, MODE_TALKING
+    MODE_IDLE, MODE_CALLING, MODE_LISTENING, MODE_THINKING, MODE_ACTION, MODE_CHAT, MODE_NEWS, MODE_TALKING, MODE_MUSIC
 )
 from utils.logger import setup_logger
 import config
@@ -26,6 +26,9 @@ class UIManager:
         self.screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.display.set_caption("语音 AI 助手")
         
+        # 隐藏鼠标光标
+        pygame.mouse.set_visible(False)
+        
         # 线程安全锁
         self._lock = threading.Lock()
         
@@ -36,11 +39,14 @@ class UIManager:
         # 初始化所有屏幕（chat 和 talking 使用同一个 TalkingScreen）
         self.screens = {
             MODE_IDLE: IdleScreen(self.screen),
+            MODE_CALLING: CallingScreen(self.screen),
             MODE_LISTENING: ListeningScreen(self.screen),
+            MODE_THINKING: ThinkingScreen(self.screen),
             MODE_ACTION: ActionScreen(self.screen),
             MODE_CHAT: TalkingScreen(self.screen),  # chat 使用 talking UI
             MODE_NEWS: NewsScreen(self.screen),
-            MODE_TALKING: TalkingScreen(self.screen)
+            MODE_TALKING: TalkingScreen(self.screen),
+            MODE_MUSIC: MusicScreen(self.screen)
         }
         
         # 设置当前屏幕

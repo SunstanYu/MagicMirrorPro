@@ -31,7 +31,7 @@ class NewsAction(BaseAction):
         logger.info(f"📰 执行新闻获取")
         
         # 固定获取10条新闻标题
-        count = 10
+        count = 5
         
         # 从 BBC RSS feed 获取新闻标题
         titles = self._fetch_titles_from_bbc(count)

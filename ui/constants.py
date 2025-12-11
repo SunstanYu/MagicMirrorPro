@@ -23,9 +23,12 @@ FONT_SIZE_SMALL = 16
 
 # UI 模式
 MODE_IDLE = "idle"
+MODE_CALLING = "calling"
 MODE_LISTENING = "listening"
+MODE_THINKING = "thinking"
 MODE_ACTION = "action"
 MODE_CHAT = "chat"
 MODE_NEWS = "news"
 MODE_TALKING = "talking"
+MODE_MUSIC = "music"
 

@@ -47,6 +47,37 @@ class PatternNLU:
                 r"what'?s?\s+going\s+on",
                 
             ],
+            "music": [
+                # play + 歌名 模式
+                r"play\s+(.+)",
+                r"play\s+the\s+song\s+(.+)",
+                r"play\s+music\s+(.+)",
+                r"play\s+a\s+song\s+(.+)",
+                r"play\s+the\s+music\s+(.+)",
+                
+                # play, 歌名 模式（语音识别可能识别为逗号分隔）
+                r"play\s*,\s*(.+)",
+                r"play\s*,\s*the\s+song\s+(.+)",
+                r"play\s*,\s*music\s+(.+)",
+                r"play\s*,\s*a\s+song\s+(.+)",
+                r"play\s*,\s*the\s+music\s+(.+)",
+                
+                # 其他变体
+                r"play\s+me\s+(.+)",
+                r"play\s+me\s+the\s+song\s+(.+)",
+                r"play\s+me\s+music\s+(.+)",
+                r"play\s+me\s+a\s+song\s+(.+)",
+                
+                # play, me 变体
+                r"play\s*,\s*me\s+(.+)",
+                r"play\s*,\s*me\s+the\s+song\s+(.+)",
+                r"play\s*,\s*me\s+music\s+(.+)",
+                r"play\s*,\s*me\s+a\s+song\s+(.+)",
+                
+                # 简单关键词
+                r"^play\s+(.+)$",
+                r"^play\s*,\s*(.+)$",
+            ],
             # 可以在这里添加更多动作的模式
             # "weather": [...],
             # "timer": [...],
@@ -127,6 +158,25 @@ class PatternNLU:
                 except ValueError:
                     pass
         
+        elif action_name == "music":
+            # 提取歌曲名（play 后面的内容）
+            # 匹配 "play" 或 "play," 后面的所有内容
+            match = re.search(r"play\s*,?\s*(?:me\s+)?(?:the\s+)?(?:song\s+|music\s+|a\s+song\s+)?(.+)", text_lower, re.IGNORECASE)
+            if match:
+                query = match.group(1).strip()
+                # 清理常见的结尾词
+                query = re.sub(r"\s+(please|now|for me|to me)$", "", query, flags=re.IGNORECASE)
+                if query:
+                    params["query"] = query
+            else:
+                # 如果上面的模式没匹配到，尝试简单匹配 "play" 或 "play," 后面的所有内容
+                match = re.search(r"play\s*,?\s*(.+)", text_lower, re.IGNORECASE)
+                if match:
+                    query = match.group(1).strip()
+                    query = re.sub(r"\s+(please|now|for me|to me)$", "", query, flags=re.IGNORECASE)
+                    if query:
+                        params["query"] = query
+        
         return params
     
     def _generate_reply(self, action_name: str) -> str:
@@ -141,6 +191,7 @@ class PatternNLU:
         """
         replies = {
             "news": "正在获取最新新闻...",
+            "music": "正在搜索并播放音乐...",
             # 可以添加更多动作的回复
         }
         return replies.get(action_name, "正在处理...")

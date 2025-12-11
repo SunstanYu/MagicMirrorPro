@@ -30,7 +30,7 @@ class StreamingRecorder:
         self.wake_word = wake_word.lower()
         self.sample_rate = config.AUDIO_SAMPLE_RATE
         self.block_size = 8000
-        self.volume_gain = 10.0
+        self.volume_gain = 2.0
         self.device_id = 1
         self.on_wake_word_detected = on_wake_word_detected
         
@@ -81,6 +81,20 @@ class StreamingRecorder:
         self._init_audio_stream()
         
         logger.info("✅ 流式录音器初始化完成")
+
+    def clear_audio_buffer(self):
+        """清空排队的历史音频，避免下一次识别出现延迟"""
+        try:
+            if not hasattr(self.audio_queue, "queue"):
+                return
+            with self.audio_queue.mutex:
+                self.audio_queue.queue.clear()
+                self.audio_queue.unfinished_tasks = 0
+                self.audio_queue.all_tasks_done.notify_all()
+                self.audio_queue.not_full.notify_all()
+            logger.info("🧹 已清空音频缓冲队列")
+        except Exception as e:
+            logger.warning(f"⚠️ 清空音频缓冲队列失败: {e}")
     
     def _init_audio_stream(self):
         """初始化并启动音频流（在初始化时调用，保持一直运行）"""
@@ -279,6 +293,9 @@ class StreamingRecorder:
         if not self._audio_stream or not self._audio_stream.active:
             logger.error("❌ 音频流未运行，无法进行识别")
             return None
+        
+        # 每次开始新的识别前清空历史缓冲，避免上一轮遗留的音频造成长延迟
+        self.clear_audio_buffer()
         
         logger.info(f"🎯 等待唤醒词 '{self.wake_word}'...")
         self.is_recording = True

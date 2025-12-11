@@ -5,6 +5,7 @@ from typing import Dict, Optional
 from actions.base import BaseAction
 from actions.weather import WeatherAction
 from actions.news import NewsAction
+from actions.music import MusicAction
 from utils.logger import setup_logger
 
 logger = setup_logger(__name__)
@@ -27,9 +28,11 @@ class ActionRegistry:
         # 注册新闻动作
         self.register(NewsAction())
         
+        # 注册音乐动作
+        self.register(MusicAction())
+        
         # TODO: 注册其他动作
         # self.register(TimerAction())
-        # self.register(MusicAction())
     
     def register(self, action: BaseAction) -> None:
         """
