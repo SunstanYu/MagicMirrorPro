@@ -1582,3 +1582,579 @@ requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://prod
 2025-12-11 03:16:22 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
 2025-12-11 03:16:24 - core.app - INFO - ⌨️ 检测到退出键，正在退出程序...
 2025-12-11 03:16:25 - __main__ - INFO - ✅ 程序已退出
+2025-12-11 03:51:29 - __main__ - INFO - 🚀 启动语音 AI 助手...
+2025-12-11 03:51:30 - core.app - INFO - 📦 初始化应用模块...
+2025-12-11 03:51:30 - io_audio.player - INFO - 🔊 音频播放器已初始化
+2025-12-11 03:51:33 - io_audio.streaming_recorder - INFO - ✅ Vosk 模型加载成功: /home/pi/MagicMirrorPro/asr/model
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO - ✅ Google ASR 客户端初始化成功
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO - 📋 可用音频输入设备:
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO -   设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (输入通道: 2)
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO -   设备 6: pulse (输入通道: 32)
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO -   设备 13: default (输入通道: 32)
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO - ✅ 使用设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (采样率: 48000Hz, 通道: 1)
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO - ✅ 音频流已启动并保持运行
+2025-12-11 03:51:34 - io_audio.streaming_recorder - INFO - ✅ 流式录音器初始化完成
+2025-12-11 03:51:34 - nlu.pattern_nlu - INFO - 🔧 初始化 Pattern-based NLU
+2025-12-11 03:51:34 - nlu.llm_client - INFO - 🔧 初始化 LLM 客户端
+2025-12-11 03:51:34 - actions.base - INFO - 🔧 初始化动作: weather
+2025-12-11 03:51:34 - actions.registry - INFO - ✅ 注册动作: weather
+2025-12-11 03:51:34 - actions.base - INFO - 🔧 初始化动作: news
+2025-12-11 03:51:34 - actions.registry - INFO - ✅ 注册动作: news
+2025-12-11 03:51:34 - actions.base - INFO - 🔧 初始化动作: music
+2025-12-11 03:51:34 - actions.registry - INFO - ✅ 注册动作: music
+2025-12-11 03:51:34 - actions.registry - INFO - 📋 动作注册表初始化完成，已注册 3 个动作
+2025-12-11 03:51:34 - tts.tts_client - INFO - 🔧 初始化 TTS 客户端: local
+2025-12-11 03:51:36 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-11 03:51:42 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-11 03:51:43 - ui.screens - INFO - ✅ 加载了 9 张图片 (appearing: 0, listening: 9)
+2025-12-11 03:51:43 - ui.screens - INFO - ✅ 加载了 5 张 thinking 图片
+2025-12-11 03:51:43 - ui.screens - INFO - ✅ 加载了 8 张 talking 图片
+2025-12-11 03:51:43 - ui.screens - INFO - ✅ 加载了 9 张 newspaper 图片
+2025-12-11 03:51:43 - ui.screens - INFO - ✅ 加载了 8 张 talking 图片
+2025-12-11 03:51:44 - ui.screens - INFO - ✅ 加载了 3 张 music 图片
+2025-12-11 03:51:44 - ui.ui_manager - INFO - 🖥️ UI 管理器初始化完成
+2025-12-11 03:51:44 - core.app - INFO - 🌤️ 正在获取今日天气数据...
+2025-12-11 03:51:44 - utils.weather_client - INFO - ✅ 使用 wttr.in 获取天气成功: Ithaca - -4°C - Overcast
+2025-12-11 03:51:44 - core.app - INFO - ✅ 今日天气数据已获取: Ithaca - -4°C - Overcast
+2025-12-11 03:51:44 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:51:44 - core.app - INFO - ✅ 检测到 SSL 证书文件，将使用 HTTPS
+2025-12-11 03:51:44 - webrtc_integration - INFO - 📂 静态文件目录: /home/pi/MagicMirrorPro/webrtc/static
+2025-12-11 03:51:44 - webrtc_integration - INFO - 🔄 启动 WebRTC 服务器: https://0.0.0.0:8080
+2025-12-11 03:51:44 - webrtc_integration - INFO - ✅ SSL 证书已加载: /home/pi/MagicMirrorPro/webrtc/certs/cert.pem
+2025-12-11 03:51:44 - webrtc_integration - INFO - 🚀 正在启动 WebRTC 服务器: https://0.0.0.0:8080
+2025-12-11 03:51:44 - webrtc_integration - INFO - 🌐 服务器开始监听: https://0.0.0.0:8080
+2025-12-11 03:51:45 - webrtc_integration - INFO - ✅ WebRTC 服务器已启动: https://<树莓派IP>:8080
+2025-12-11 03:51:45 - core.app - INFO - ✅ 应用初始化完成
+2025-12-11 03:51:45 - core.app - INFO - 🔄 进入主循环...
+2025-12-11 03:51:45 - io_audio.streaming_recorder - INFO - 🧹 已清空音频缓冲队列
+2025-12-11 03:51:45 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-11 03:51:45 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-11 03:51:45 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-11 03:51:55 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-11 03:52:01 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-11 03:52:04 - webrtc_integration - INFO - 🔌 新的 WebSocket 连接
+2025-12-11 03:52:04 - webrtc_integration - INFO - 📨 收到消息: offer
+2025-12-11 03:52:04 - core.app - INFO - 📞 收到通话请求，切换到通话状态...
+2025-12-11 03:52:04 - io_audio.streaming_recorder - INFO - ⏹️ 音频流已关闭
+2025-12-11 03:52:04 - io_audio.streaming_recorder - INFO - ⏹️ 停止录音
+2025-12-11 03:52:04 - core.app - INFO - ⏳ 等待监听任务退出...
+2025-12-11 03:52:05 - core.app - WARNING - ⚠️ 监听任务未及时退出，但继续切换状态
+2025-12-11 03:52:05 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> calling
+2025-12-11 03:52:05 - core.app - INFO - ✅ 已切换到通话状态 UI
+2025-12-11 03:52:05 - core.app - INFO - 🛑 监听任务已结束
+2025-12-11 03:52:05 - core.app - INFO - ✅ 当前状态: AppState.CALLING
+2025-12-11 03:52:05 - webrtc_integration - INFO - ✅ 音频输入已启动 (设备 1, 48000Hz)
+2025-12-11 03:52:05 - webrtc_integration - INFO - ✅ 音频输入已添加
+2025-12-11 03:52:05 - webrtc_integration - INFO - 🎵 收到远程音频轨道: audio
+2025-12-11 03:52:05 - webrtc_integration - INFO - ✅ 已设置远程描述 (offer)
+2025-12-11 03:52:05 - webrtc_integration - INFO - ✅ 已创建本地描述 (answer)
+2025-12-11 03:52:05 - webrtc_integration - INFO - 📤 已发送 answer
+2025-12-11 03:52:05 - webrtc_integration - INFO - 📨 收到消息: ice-candidate
+2025-12-11 03:52:05 - webrtc_integration - INFO - 📨 收到消息: ice-candidate
+2025-12-11 03:52:05 - webrtc_integration - INFO - 🧊 ICE 状态: checking
+2025-12-11 03:52:05 - webrtc_integration - INFO - 🧊 ICE 状态: completed
+2025-12-11 03:52:15 - webrtc_integration - INFO - 📨 收到消息: bye
+2025-12-11 03:52:15 - webrtc_integration - INFO - 👋 收到断开连接请求
+2025-12-11 03:52:15 - webrtc_integration - INFO - 🧊 ICE 状态: closed
+2025-12-11 03:52:15 - core.app - INFO - 📞 通话结束，返回空闲状态...
+2025-12-11 03:52:15 - core.app - INFO - 🔄 重新启动音频流...
+2025-12-11 03:52:15 - io_audio.streaming_recorder - INFO - 📋 可用音频输入设备:
+2025-12-11 03:52:15 - io_audio.streaming_recorder - INFO -   设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (输入通道: 2)
+2025-12-11 03:52:15 - io_audio.streaming_recorder - INFO -   设备 6: pulse (输入通道: 32)
+2025-12-11 03:52:15 - io_audio.streaming_recorder - INFO -   设备 13: default (输入通道: 32)
+2025-12-11 03:52:15 - io_audio.streaming_recorder - INFO - ✅ 使用设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (采样率: 48000Hz, 通道: 1)
+2025-12-11 03:52:16 - io_audio.streaming_recorder - ERROR - ❌ 初始化音频流失败: Error opening InputStream: Device unavailable [PaErrorCode -9985]
+2025-12-11 03:52:16 - core.app - ERROR - ❌ 重新启动音频流失败: Error opening InputStream: Device unavailable [PaErrorCode -9985]
+Traceback (most recent call last):
+  File "/home/pi/MagicMirrorPro/core/app.py", line 396, in _on_call_end
+    self.streaming_recorder._init_audio_stream()
+  File "/home/pi/MagicMirrorPro/io_audio/streaming_recorder.py", line 134, in _init_audio_stream
+    self._audio_stream = sd.InputStream(
+  File "/home/pi/.local/lib/python3.9/site-packages/sounddevice.py", line 1452, in __init__
+    _StreamBase.__init__(self, kind='input', wrap_callback='array',
+  File "/home/pi/.local/lib/python3.9/site-packages/sounddevice.py", line 909, in __init__
+    _check(_lib.Pa_OpenStream(self._ptr, iparameters, oparameters,
+  File "/home/pi/.local/lib/python3.9/site-packages/sounddevice.py", line 2823, in _check
+    raise PortAudioError(errormsg, err)
+sounddevice.PortAudioError: Error opening InputStream: Device unavailable [PaErrorCode -9985]
+2025-12-11 03:52:16 - ui.ui_manager - INFO - 🔄 切换 UI 模式: calling -> idle
+2025-12-11 03:52:16 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:16 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:16 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:16 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:16 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:16 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:16 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:16 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:16 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:16 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:16 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:16 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:17 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:17 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:18 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:18 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:19 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:19 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:20 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:21 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:21 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:22 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:22 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:23 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:23 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:24 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:24 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:25 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:25 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:26 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:26 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:27 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:27 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:28 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:29 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:29 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:30 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:30 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:31 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:31 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:32 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:33 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:33 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:33 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:33 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:33 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:33 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:33 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:33 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:33 - io_audio.streaming_recorder - ERROR - ❌ 音频流未运行，无法进行识别
+2025-12-11 03:52:33 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:52:33 - core.app - INFO - ⌨️ 检测到退出键，正在退出程序...
+2025-12-11 03:52:33 - core.app - INFO - 🛑 监听任务已结束
+2025-12-11 03:52:33 - core.app - INFO - ✅ 当前状态: AppState.IDLE
+2025-12-11 03:52:33 - __main__ - INFO - ✅ 程序已退出
+2025-12-11 03:56:39 - __main__ - INFO - 🚀 启动语音 AI 助手...
+2025-12-11 03:56:40 - core.app - INFO - 📦 初始化应用模块...
+2025-12-11 03:56:40 - io_audio.player - INFO - 🔊 音频播放器已初始化
+2025-12-11 03:56:42 - io_audio.streaming_recorder - INFO - ✅ Vosk 模型加载成功: /home/pi/MagicMirrorPro/asr/model
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO - ✅ Google ASR 客户端初始化成功
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO - 📋 可用音频输入设备:
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO -   设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (输入通道: 2)
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO -   设备 6: pulse (输入通道: 32)
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO -   设备 13: default (输入通道: 32)
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO - ✅ 使用设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (采样率: 48000Hz, 通道: 1)
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO - ✅ 音频流已启动并保持运行
+2025-12-11 03:56:43 - io_audio.streaming_recorder - INFO - ✅ 流式录音器初始化完成
+2025-12-11 03:56:43 - nlu.pattern_nlu - INFO - 🔧 初始化 Pattern-based NLU
+2025-12-11 03:56:43 - nlu.llm_client - INFO - 🔧 初始化 LLM 客户端
+2025-12-11 03:56:43 - actions.base - INFO - 🔧 初始化动作: weather
+2025-12-11 03:56:43 - actions.registry - INFO - ✅ 注册动作: weather
+2025-12-11 03:56:43 - actions.base - INFO - 🔧 初始化动作: news
+2025-12-11 03:56:43 - actions.registry - INFO - ✅ 注册动作: news
+2025-12-11 03:56:43 - actions.base - INFO - 🔧 初始化动作: music
+2025-12-11 03:56:43 - actions.registry - INFO - ✅ 注册动作: music
+2025-12-11 03:56:43 - actions.registry - INFO - 📋 动作注册表初始化完成，已注册 3 个动作
+2025-12-11 03:56:43 - tts.tts_client - INFO - 🔧 初始化 TTS 客户端: local
+2025-12-11 03:56:49 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-11 03:56:50 - ui.screens - INFO - ✅ 加载了 9 张图片 (appearing: 0, listening: 9)
+2025-12-11 03:56:50 - ui.screens - INFO - ✅ 加载了 5 张 thinking 图片
+2025-12-11 03:56:50 - ui.screens - INFO - ✅ 加载了 8 张 talking 图片
+2025-12-11 03:56:50 - ui.screens - INFO - ✅ 加载了 9 张 newspaper 图片
+2025-12-11 03:56:50 - ui.screens - INFO - ✅ 加载了 8 张 talking 图片
+2025-12-11 03:56:50 - ui.screens - INFO - ✅ 加载了 3 张 music 图片
+2025-12-11 03:56:50 - ui.ui_manager - INFO - 🖥️ UI 管理器初始化完成
+2025-12-11 03:56:50 - core.app - INFO - 🌤️ 正在获取今日天气数据...
+2025-12-11 03:57:04 - utils.weather_client - INFO - ✅ 使用 wttr.in 获取天气成功: Ithaca - -4°C - Overcast
+2025-12-11 03:57:04 - core.app - INFO - ✅ 今日天气数据已获取: Ithaca - -4°C - Overcast
+2025-12-11 03:57:04 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> idle
+2025-12-11 03:57:04 - core.app - INFO - ✅ 检测到 SSL 证书文件，将使用 HTTPS
+2025-12-11 03:57:04 - webrtc_integration - INFO - 📂 静态文件目录: /home/pi/MagicMirrorPro/webrtc/static
+2025-12-11 03:57:04 - webrtc_integration - INFO - 🔄 启动 WebRTC 服务器: https://0.0.0.0:8080
+2025-12-11 03:57:04 - webrtc_integration - INFO - ✅ SSL 证书已加载: /home/pi/MagicMirrorPro/webrtc/certs/cert.pem
+2025-12-11 03:57:04 - webrtc_integration - INFO - 🚀 正在启动 WebRTC 服务器: https://0.0.0.0:8080
+2025-12-11 03:57:04 - webrtc_integration - INFO - 🌐 服务器开始监听: https://0.0.0.0:8080
+2025-12-11 03:57:05 - webrtc_integration - INFO - ✅ WebRTC 服务器已启动: https://<树莓派IP>:8080
+2025-12-11 03:57:05 - core.app - INFO - ✅ 应用初始化完成
+2025-12-11 03:57:05 - core.app - INFO - 🔄 进入主循环...
+2025-12-11 03:57:05 - io_audio.streaming_recorder - INFO - 🧹 已清空音频缓冲队列
+2025-12-11 03:57:05 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-11 03:57:05 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-11 03:57:10 - webrtc_integration - INFO - 🔌 新的 WebSocket 连接
+2025-12-11 03:57:10 - webrtc_integration - INFO - 📨 收到消息: offer
+2025-12-11 03:57:10 - core.app - INFO - 📞 收到通话请求，切换到通话状态...
+2025-12-11 03:57:11 - io_audio.streaming_recorder - INFO - ⏹️ 音频流已关闭
+2025-12-11 03:57:11 - io_audio.streaming_recorder - INFO - ⏹️ 停止录音
+2025-12-11 03:57:11 - core.app - INFO - ⏳ 等待监听任务退出...
+2025-12-11 03:57:12 - core.app - WARNING - ⚠️ 监听任务未及时退出，但继续切换状态
+2025-12-11 03:57:12 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> calling
+2025-12-11 03:57:12 - core.app - INFO - ✅ 已切换到通话状态 UI
+2025-12-11 03:57:12 - core.app - INFO - 🛑 监听任务已结束
+2025-12-11 03:57:12 - core.app - INFO - ✅ 当前状态: AppState.CALLING
+2025-12-11 03:57:12 - webrtc_integration - INFO - ✅ 音频输入已启动 (设备 1, 48000Hz)
+2025-12-11 03:57:12 - webrtc_integration - INFO - ✅ 音频输入已添加
+2025-12-11 03:57:12 - webrtc_integration - INFO - 🎵 收到远程音频轨道: audio
+2025-12-11 03:57:12 - webrtc_integration - INFO - ✅ 已设置远程描述 (offer)
+2025-12-11 03:57:12 - webrtc_integration - INFO - ✅ 已创建本地描述 (answer)
+2025-12-11 03:57:12 - webrtc_integration - INFO - 📤 已发送 answer
+2025-12-11 03:57:12 - webrtc_integration - INFO - 📨 收到消息: ice-candidate
+2025-12-11 03:57:12 - webrtc_integration - INFO - 📨 收到消息: ice-candidate
+2025-12-11 03:57:12 - webrtc_integration - INFO - 🧊 ICE 状态: checking
+2025-12-11 03:57:12 - webrtc_integration - INFO - 🧊 ICE 状态: completed
+2025-12-11 03:57:19 - webrtc_integration - INFO - 📨 收到消息: bye
+2025-12-11 03:57:19 - webrtc_integration - INFO - 👋 收到断开连接请求
+2025-12-11 03:57:19 - webrtc_integration - INFO - 🛑 正在停止音频输入轨道...
+2025-12-11 03:57:19 - webrtc_integration - INFO - 🛑 正在停止 WebRTC 音频输入流...
+2025-12-11 03:57:19 - webrtc_integration - INFO - ✅ WebRTC 音频输入流已停止并释放
+2025-12-11 03:57:19 - webrtc_integration - INFO - 🧊 ICE 状态: closed
+2025-12-11 03:57:20 - webrtc_integration - INFO - ✅ WebRTC 连接已完全关闭
+2025-12-11 03:57:20 - core.app - INFO - 📞 通话结束，返回空闲状态...
+2025-12-11 03:57:20 - core.app - INFO - ⏳ 等待音频设备释放...
+2025-12-11 03:57:20 - core.app - INFO - 🔄 重新启动音频流... (尝试 1/3)
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO - 📋 可用音频输入设备:
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO -   设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (输入通道: 2)
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO -   设备 6: pulse (输入通道: 32)
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO -   设备 13: default (输入通道: 32)
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO - ✅ 使用设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (采样率: 48000Hz, 通道: 1)
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO - ✅ 音频流已启动并保持运行
+2025-12-11 03:57:20 - core.app - INFO - ✅ 音频流已重新启动
+2025-12-11 03:57:20 - ui.ui_manager - INFO - 🔄 切换 UI 模式: calling -> idle
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO - 🧹 已清空音频缓冲队列
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-11 03:57:20 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-11 03:57:21 - io_audio.streaming_recorder - WARNING - ⚠️ 音频状态: input overflow
+2025-12-11 03:57:28 - io_audio.streaming_recorder - INFO - 🔍 Vosk 部分结果: hello
+2025-12-11 03:57:28 - io_audio.streaming_recorder - INFO - ✅ 在部分结果中检测到唤醒词 'hello'
+2025-12-11 03:57:28 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词 'hello'
+2025-12-11 03:57:28 - core.app - INFO - 🔔 唤醒词检测回调被触发
+2025-12-11 03:57:28 - io_audio.streaming_recorder - INFO - ✅ 检测到唤醒词，准备开始识别...
+2025-12-11 03:57:28 - io_audio.streaming_recorder - INFO - 🔊 开始 Google 流式识别，请说话...
+2025-12-11 03:57:28 - ui.ui_manager - INFO - 🔄 切换 UI 模式: idle -> listening
+2025-12-11 03:57:28 - ui.screens - INFO - ✅ 加载了 23 张图片 (appearing: 14, listening: 9)
+2025-12-11 03:57:32 - io_audio.streaming_recorder - INFO - 📝 识别到句子: Play, happy music.
+2025-12-11 03:57:32 - io_audio.streaming_recorder - INFO - 💾 识别结果已保存: Play, happy music.
+2025-12-11 03:57:32 - io_audio.streaming_recorder - INFO - ✅ 识别到最终结果，停止识别流程
+2025-12-11 03:57:32 - core.app - INFO - ✅ 检测到识别结果: Play, happy music.，等待处理...
+2025-12-11 03:57:32 - core.app - INFO - ✅ 检测到识别结果: Play, happy music.，等待处理...
+2025-12-11 03:57:32 - core.app - INFO - ✅ 检测到识别结果: Play, happy music.，等待处理...
+2025-12-11 03:57:32 - core.app - INFO - ✅ 检测到识别结果: Play, happy music.，等待处理...
+2025-12-11 03:57:32 - core.app - INFO - ✅ 检测到识别结果: Play, happy music.，等待处理...
+2025-12-11 03:57:32 - core.app - INFO - ✅ 检测到识别结果: Play, happy music.，等待处理...
+2025-12-11 03:57:32 - core.app - INFO - ✅ 检测到识别结果: Play, happy music.，等待处理...
+2025-12-11 03:57:32 - core.app - INFO - ✅ 最终识别结果: Play, happy music.
+2025-12-11 03:57:32 - core.app - INFO - 🛑 监听任务已结束
+2025-12-11 03:57:32 - core.app - INFO - ✅ 当前状态: AppState.THINKING
+2025-12-11 03:57:32 - core.app - INFO - 🔍 [思考任务] 当前背景任务: None
+2025-12-11 03:57:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: listening -> thinking
+2025-12-11 03:57:32 - core.app - INFO - ✅ 启动后台任务: None
+2025-12-11 03:57:32 - core.app - INFO - 🔍 [思考任务] 开始意图识别...
+2025-12-11 03:57:32 - core.app - INFO - 🔍 [思考任务] 当前识别结果: Play, happy music.
+2025-12-11 03:57:32 - core.app - INFO - 🔍 [思考任务] 用户文本: Play, happy music.
+2025-12-11 03:57:32 - nlu.pattern_nlu - INFO - ✅ 模式匹配成功: 'play\s*,\s*(.+)' -> action: music
+2025-12-11 03:57:32 - core.app - INFO - 🔍 [思考任务] 当前背景任务: <Thread(Thread-11, started daemon 545620218304)>
+2025-12-11 03:57:32 - core.app - INFO - ✅ 模式匹配识别到动作: music
+2025-12-11 03:57:32 - core.app - INFO - ⚙️ [ACTING] 执行动作: music
+2025-12-11 03:57:32 - actions.music - INFO - 🎵 检测到预设音乐: happy
+2025-12-11 03:57:32 - actions.music - INFO - ▶️ [音乐播放] 开始播放本地文件: /home/pi/MagicMirrorPro/resources/bgm/Happy.wav
+2025-12-11 03:57:32 - actions.music - INFO - ✅ 开始播放预设音乐: Happy
+2025-12-11 03:57:32 - core.app - INFO - 🎵 [ACTING] 准备播放音乐，停止并重置音频流...
+2025-12-11 03:57:32 - core.app - INFO - 🛑 停止所有后台任务...
+2025-12-11 03:57:32 - core.app - INFO - 🛑 [音乐播放] 停止 streaming_recorder 的音频流...
+2025-12-11 03:57:32 - core.app - INFO - 🛑 [音乐播放] 正在停止音频流...
+2025-12-11 03:57:32 - core.app - INFO - ✅ [音乐播放] streaming_recorder 音频流已关闭
+2025-12-11 03:57:32 - core.app - INFO - ✅ [ACTING] 音频流已停止，开始播放音乐
+2025-12-11 03:57:32 - ui.ui_manager - INFO - 🔄 切换 UI 模式: thinking -> music
+2025-12-11 03:57:32 - core.app - INFO - 🎵 [ACTING] 已切换到 MUSIC 状态，音乐信息: {'track_name': 'Happy', 'artist': 'Preset Music', 'album': 'Background Music', 'duration': 55}
+2025-12-11 03:57:32 - actions.music - INFO - ✅ [音乐播放] 音频文件读取成功，采样率: 48000Hz, 数据形状: (2668361, 2)
+2025-12-11 03:57:33 - actions.music - INFO - ▶️ [音乐播放] 开始播放，播放速率: 38400.0Hz
+2025-12-11 03:57:33 - actions.music - INFO - 🔍 [音乐播放] 默认输出设备: default
+2025-12-11 03:57:34 - core.app - INFO - ⌨️ 检测到回车键，停止音乐播放并返回空闲状态...
+2025-12-11 03:57:34 - actions.music - INFO - ⏹️ [音乐播放] stop() 被调用
+2025-12-11 03:57:34 - actions.music - INFO - ✅ [音乐播放] sd.stop() 已调用
+2025-12-11 03:57:34 - actions.music - INFO - ⏳ [音乐播放] stop() 等待播放线程退出...
+2025-12-11 03:57:34 - actions.music - INFO - ⏹️ [音乐播放] _is_playing 变为 False，中断播放循环
+2025-12-11 03:57:34 - actions.music - INFO - 🛑 [音乐播放] sd.stop() 已调用（本地文件）
+2025-12-11 03:57:34 - actions.music - INFO - ✅ [音乐播放] 本地文件播放线程结束，_is_playing 已设置为 False
+2025-12-11 03:57:34 - core.app - INFO - 🛑 停止所有后台任务...
+2025-12-11 03:57:34 - core.app - INFO - 🔄 重置 streaming_recorder 状态...
+2025-12-11 03:57:34 - core.app - INFO - 🔄 音频流未活动，重新初始化...
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO - 📋 可用音频输入设备:
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO -   设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (输入通道: 2)
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO -   设备 6: pulse (输入通道: 32)
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO -   设备 13: default (输入通道: 32)
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO - ✅ 使用设备 1: snd_rpi_googlevoicehat_soundcar: Google voiceHAT SoundCard HiFi voicehat-hifi-0 (hw:3,0) (采样率: 48000Hz, 通道: 1)
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO - ✅ 音频流已启动并保持运行
+2025-12-11 03:57:34 - core.app - INFO - ✅ 音频流已重新初始化
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO - 🧹 已清空音频缓冲队列
+2025-12-11 03:57:34 - ui.ui_manager - INFO - 🔄 切换 UI 模式: music -> idle
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO - 🧹 已清空音频缓冲队列
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO - 🎯 等待唤醒词 'hello'...
+2025-12-11 03:57:34 - io_audio.streaming_recorder - INFO - 🎤 正在监听，请说 'hello'...
+2025-12-11 03:57:43 - core.app - INFO - ⌨️ 检测到退出键，正在退出程序...
+2025-12-11 03:57:43 - __main__ - INFO - ✅ 程序已退出

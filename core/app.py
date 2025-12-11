@@ -385,16 +385,36 @@ class AssistantApp:
             if hasattr(self.streaming_recorder, '_audio_stream') and self.streaming_recorder._audio_stream:
                 try:
                     if self.streaming_recorder._audio_stream.active:
+                        logger.info("🛑 停止旧的音频流...")
                         self.streaming_recorder._audio_stream.stop()
                         self.streaming_recorder._audio_stream.close()
-                except:
-                    pass
+                        self.streaming_recorder._audio_stream = None
+                except Exception as e:
+                    logger.warning(f"⚠️ 关闭旧音频流时出错: {e}")
             
-            # 重新初始化音频流
+            # 等待设备完全释放（重要：给 PortAudio 时间释放设备）
+            import time
+            logger.info("⏳ 等待音频设备释放...")
+            time.sleep(0.5)  # 等待 500ms 让设备完全释放
+            
+            # 重新初始化音频流（带重试机制）
             if hasattr(self.streaming_recorder, '_init_audio_stream'):
-                logger.info("🔄 重新启动音频流...")
-                self.streaming_recorder._init_audio_stream()
-                logger.info("✅ 音频流已重新启动")
+                max_retries = 3
+                retry_delay = 0.5
+                
+                for attempt in range(max_retries):
+                    try:
+                        logger.info(f"🔄 重新启动音频流... (尝试 {attempt + 1}/{max_retries})")
+                        self.streaming_recorder._init_audio_stream()
+                        logger.info("✅ 音频流已重新启动")
+                        break
+                    except Exception as e:
+                        if attempt < max_retries - 1:
+                            logger.warning(f"⚠️ 启动音频流失败，{retry_delay}秒后重试: {e}")
+                            time.sleep(retry_delay)
+                            retry_delay *= 1.5  # 指数退避
+                        else:
+                            logger.error(f"❌ 重新启动音频流失败（已重试 {max_retries} 次）: {e}", exc_info=True)
         except Exception as e:
             logger.error(f"❌ 重新启动音频流失败: {e}", exc_info=True)
         

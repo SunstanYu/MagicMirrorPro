@@ -411,12 +411,15 @@ class StreamingRecorder:
         self.is_recording = False
         self._wake_word_detection_active = False
         
-        if self._audio_stream and self._audio_stream.active:
+        if self._audio_stream:
             try:
-                self._audio_stream.stop()
+                if self._audio_stream.active:
+                    self._audio_stream.stop()
                 self._audio_stream.close()
                 logger.info("⏹️ 音频流已关闭")
             except Exception as e:
                 logger.warning(f"⚠️ 关闭音频流时出错: {e}")
+            finally:
+                self._audio_stream = None  # 确保设置为 None，释放引用
         
         logger.info("⏹️ 停止录音")
