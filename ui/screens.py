@@ -760,25 +760,98 @@ class NewsScreen(BaseScreen):
 
 
 class CallingScreen(BaseScreen):
-    """通话屏幕"""
+    """通话屏幕 - 上1/3显示"Calling"标题，下2/3循环播放telescope图片"""
     
     def __init__(self, surface: pygame.Surface):
         """初始化通话屏幕"""
         super().__init__(surface)
+        self.images: List[pygame.Surface] = []
+        self.current_frame_index = 0
+        self.frame_counter = 0
+        self.frame_interval = 5  # 每5帧切换一张图片
+        self._init_images()
+    
+    def _init_images(self):
+        """初始化telescope图片列表"""
+        try:
+            telescope_dir = "/home/pi/MagicMirrorPro/resources/telescope"
+            if os.path.exists(telescope_dir):
+                telescope_files = sorted([f for f in os.listdir(telescope_dir) if f.endswith('.png')])
+                for f in telescope_files:
+                    try:
+                        img = pygame.image.load(os.path.join(telescope_dir, f))
+                        img = self._scale_image_for_bottom_area(img)
+                        self.images.append(img)
+                    except Exception as e:
+                        logger.warning(f"⚠️ 加载 telescope 图片失败: {e}")
+                
+                if self.images:
+                    logger.info(f"✅ 加载了 {len(self.images)} 张 telescope 图片")
+                else:
+                    logger.warning("⚠️ 没有加载到任何 telescope 图片")
+            else:
+                logger.warning(f"⚠️ telescope 目录不存在: {telescope_dir}")
+        except Exception as e:
+            logger.error(f"❌ 初始化 telescope 图片失败: {e}")
+    
+    def _scale_image_for_bottom_area(self, img: pygame.Surface) -> pygame.Surface:
+        """缩放图片以适应下方2/3区域"""
+        screen_w, screen_h = self.surface.get_size()
+        img_w, img_h = img.get_size()
+        
+        # 下方2/3区域的高度
+        bottom_area_h = int(screen_h * 2 / 3)
+        bottom_area_w = screen_w
+        
+        # 计算缩放比例（保持比例，适应下方区域）
+        scale = min(bottom_area_w / img_w, bottom_area_h / img_h)
+        new_w = int(img_w * scale)
+        new_h = int(img_h * scale)
+        
+        return pygame.transform.scale(img, (new_w, new_h))
     
     def render(self) -> None:
         """渲染通话屏幕"""
         self.surface.fill(COLOR_BG)
         
-        # 显示"通话中"文字（大字体，居中）
-        calling_text = self.font_large.render("Calling...", True, COLOR_PRIMARY)
-        calling_rect = calling_text.get_rect(center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
+        # 渲染上方1/3区域的"Calling"标题
+        screen_w, screen_h = self.surface.get_size()
+        top_area_h = int(screen_h / 3)  # 上方1/3区域高度
+        
+        calling_text = self.font_large.render("Calling", True, COLOR_PRIMARY)
+        calling_rect = calling_text.get_rect(center=(screen_w // 2, top_area_h // 2))
         self.surface.blit(calling_text, calling_rect)
         
-        # 显示提示文字（小字体）
-        hint_text = self.font_small.render("Talking with remote device", True, COLOR_TEXT)
-        hint_rect = hint_text.get_rect(center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2 + 50))
-        self.surface.blit(hint_text, hint_rect)
+        # 渲染下方2/3区域的telescope图片动画
+        if not self.images:
+            # 如果没有图片，显示占位文字
+            fallback_text = self.font_medium.render("No images available", True, COLOR_TEXT)
+            fallback_rect = fallback_text.get_rect(center=(screen_w // 2, screen_h // 2))
+            self.surface.blit(fallback_text, fallback_rect)
+            return
+        
+        # 更新帧计数器
+        self.frame_counter += 1
+        if self.frame_counter >= self.frame_interval:
+            self.frame_counter = 0
+            self.current_frame_index += 1
+            # 循环播放
+            if self.current_frame_index >= len(self.images):
+                self.current_frame_index = 0
+        
+        # 获取当前图片
+        current_img = self.images[self.current_frame_index]
+        
+        # 计算下方2/3区域的起始位置
+        bottom_area_y = top_area_h  # 下方2/3区域起始Y坐标
+        
+        # 计算图片在下方区域的居中位置
+        img_w, img_h = current_img.get_size()
+        x = (screen_w - img_w) // 2
+        y = bottom_area_y + (int(screen_h * 2 / 3) - img_h) // 2
+        
+        # 绘制图片
+        self.surface.blit(current_img, (x, y))
 
 
 class MusicScreen(BaseScreen):

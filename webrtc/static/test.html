@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC 兼容性测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .pass { background: #d4edda; }
+        .fail { background: #f8d7da; }
+        .warn { background: #fff3cd; }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 WebRTC 兼容性诊断</h1>
+    
+    <div id="results"></div>
+    
+    <button onclick="testGetUserMedia()">测试 getUserMedia</button>
+    <button onclick="location.reload()">刷新页面</button>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        function addResult(title, status, details) {
+            const div = document.createElement('div');
+            div.className = `test-item ${status}`;
+            div.innerHTML = `<strong>${title}</strong>: ${status === 'pass' ? '✅' : status === 'fail' ? '❌' : '⚠️'}<br>${details}`;
+            results.appendChild(div);
+        }
+        
+        // 基础检查
+        function runTests() {
+            results.innerHTML = '';
+            
+            // 1. 检查 navigator.mediaDevices
+            const hasMediaDevices = !!navigator.mediaDevices;
+            addResult('navigator.mediaDevices', hasMediaDevices ? 'pass' : 'fail', 
+                hasMediaDevices ? '存在' : '不存在');
+            
+            // 2. 检查 navigator.mediaDevices.getUserMedia
+            const hasGetUserMedia = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+            addResult('navigator.mediaDevices.getUserMedia', hasGetUserMedia ? 'pass' : 'warn', 
+                hasGetUserMedia ? '存在' : '不存在（可能需要在用户交互后访问）');
+            
+            // 3. 检查旧版 API
+            const hasOldAPI = !!(navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia);
+            addResult('旧版 getUserMedia API', hasOldAPI ? 'pass' : 'fail', 
+                hasOldAPI ? '存在' : '不存在');
+            
+            // 4. 检查 RTCPeerConnection
+            const hasRTC = !!(window.RTCPeerConnection || window.webkitRTCPeerConnection || window.mozRTCPeerConnection);
+            addResult('RTCPeerConnection', hasRTC ? 'pass' : 'fail', 
+                hasRTC ? '存在' : '不存在');
+            
+            // 5. 检查协议
+            const protocol = window.location.protocol;
+            const isSecure = protocol === 'https:' || 
+                           window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1';
+            addResult('协议安全性', isSecure ? 'pass' : 'warn', 
+                `当前协议: ${protocol} ${isSecure ? '(安全)' : '(某些浏览器可能限制)'}`);
+            
+            // 6. 浏览器信息
+            addResult('浏览器信息', 'pass', 
+                `<pre>${navigator.userAgent}</pre>`);
+            
+            // 7. 完整 navigator.mediaDevices 对象
+            if (navigator.mediaDevices) {
+                const methods = Object.keys(navigator.mediaDevices).join(', ');
+                addResult('mediaDevices 方法', 'pass', 
+                    `可用方法: ${methods || '无'}`);
+            }
+        }
+        
+        // 测试 getUserMedia
+        async function testGetUserMedia() {
+            try {
+                addResult('getUserMedia 测试', 'warn', '正在请求麦克风权限...');
+                
+                if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                    // 尝试创建兼容层
+                    if (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia) {
+                        navigator.mediaDevices = navigator.mediaDevices || {};
+                        navigator.mediaDevices.getUserMedia = function(constraints) {
+                            const getUserMedia = navigator.getUserMedia || 
+                                               navigator.webkitGetUserMedia || 
+                                               navigator.mozGetUserMedia;
+                            return new Promise(function(resolve, reject) {
+                                getUserMedia.call(navigator, constraints, resolve, reject);
+                            });
+                        };
+                    } else {
+                        throw new Error('getUserMedia 不可用');
+                    }
+                }
+                
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                addResult('getUserMedia 测试', 'pass', 
+                    `✅ 成功获取音频流！<br>轨道数: ${stream.getTracks().length}<br>轨道类型: ${stream.getTracks().map(t => t.kind).join(', ')}`);
+                
+                // 停止流
+                stream.getTracks().forEach(track => track.stop());
+            } catch (error) {
+                addResult('getUserMedia 测试', 'fail', 
+                    `❌ 失败: ${error.name} - ${error.message}`);
+            }
+        }
+        
+        // 页面加载时运行测试
+        window.addEventListener('load', runTests);
+    </script>
+</body>
+</html>
+

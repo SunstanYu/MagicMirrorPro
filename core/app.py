@@ -80,7 +80,7 @@ class AssistantApp:
         
         # 监听状态超时控制
         self._listening_start_time: Optional[float] = None
-        self._listening_timeout = 5.0  # 5秒超时
+        self._listening_timeout = 8.0  # 5秒超时
         
         # 播放状态标志，避免重复启动播放任务
         self._speaking_handled = False
@@ -124,7 +124,8 @@ class AssistantApp:
             cert_file=cert_file if use_https else None,
             key_file=key_file if use_https else None,
             on_call_start=self._on_call_start,
-            on_call_end=self._on_call_end
+            on_call_end=self._on_call_end,
+            streaming_recorder=self.streaming_recorder
         )
         # 启动 WebRTC 服务器（后台线程）
         self.webrtc.start()
@@ -237,7 +238,20 @@ class AssistantApp:
         
     
     def _handle_idle(self):
-        """处理空闲状态 - 后台等待唤醒词，UI 保持空闲状态"""        
+        """处理空闲状态 - 后台等待唤醒词，UI 保持空闲状态"""
+        # 音频流一直保持运行，不需要重新初始化
+        # 只需要确保 streaming_recorder 状态正确
+        try:
+            # 确保音频流是活动的
+            if hasattr(self.streaming_recorder, '_audio_stream'):
+                if not self.streaming_recorder._audio_stream or not self.streaming_recorder._audio_stream.active:
+                    logger.warning("⚠️ [IDLE] 音频流未活动，尝试重新初始化...")
+                    self._reset_streaming_recorder()
+                else:
+                    logger.debug("✅ [IDLE] 音频流正常活动")
+        except Exception as e:
+            logger.error(f"❌ [IDLE] 检查音频流状态失败: {e}", exc_info=True)
+        
         # 检查是否已有后台任务在运行
         with self._task_lock:
             if self._background_task and self._background_task.is_alive():
@@ -343,85 +357,59 @@ class AssistantApp:
     def _on_call_start(self):
         """通话开始回调（在 WebRTC 线程中调用）"""
         logger.info("📞 收到通话请求，切换到通话状态...")
-        
+
         # 先设置状态为 CALLING，让 _waiting_task 立即退出
         self.state = AppState.CALLING
-        
-        # 停止当前的音频输入（streaming_recorder）
+
+        # 只停止唤醒词检测逻辑，不关闭音频流
+        # 音频流会继续运行，提供给 WebRTC 使用
         try:
-            if hasattr(self.streaming_recorder, 'stop'):
-                self.streaming_recorder.stop()
-        except:
-            pass
-        
-        # 等待后台任务退出（最多等待 1 秒）
+            if hasattr(self.streaming_recorder, 'is_recording'):
+                self.streaming_recorder.is_recording = False
+            if hasattr(self.streaming_recorder, '_wake_word_detection_active'):
+                self.streaming_recorder._wake_word_detection_active = False
+            if hasattr(self.streaming_recorder, '_streaming_active'):
+                self.streaming_recorder._streaming_active = False
+            logger.info("✅ [CALL] 已停止唤醒词检测（音频流保持运行）")
+        except Exception as e:
+            logger.warning(f"⚠️ 停止唤醒词检测时出错: {e}")
+
+        # 等待后台任务退出
         import time
         with self._task_lock:
             if self._background_task and self._background_task.is_alive():
                 logger.info("⏳ 等待监听任务退出...")
-                # 等待任务退出
                 for _ in range(10):
                     time.sleep(0.1)
                     if not self._background_task.is_alive():
                         break
                 if self._background_task.is_alive():
                     logger.warning("⚠️ 监听任务未及时退出，但继续切换状态")
-        
-        # 切换到通话状态 UI（确保状态已经是 CALLING）
+
+        # 切换 UI
         with self._task_lock:
             if self.state == AppState.CALLING:
                 self.ui_manager.set_mode("calling")
                 logger.info("✅ 已切换到通话状态 UI")
-            else:
-                logger.warning(f"⚠️ 状态已改变为 {self.state}，不切换 UI")
     
     def _on_call_end(self):
         """通话结束回调（在 WebRTC 线程中调用）"""
         logger.info("📞 通话结束，返回空闲状态...")
-        
-        # 重新启动 streaming_recorder 的音频流（因为通话时被停止了）
+
+        # 停止 WebRTC 模式（停止从 streaming_recorder 获取音频）
         try:
-            # 确保旧的音频流已关闭
-            if hasattr(self.streaming_recorder, '_audio_stream') and self.streaming_recorder._audio_stream:
-                try:
-                    if self.streaming_recorder._audio_stream.active:
-                        logger.info("🛑 停止旧的音频流...")
-                        self.streaming_recorder._audio_stream.stop()
-                        self.streaming_recorder._audio_stream.close()
-                        self.streaming_recorder._audio_stream = None
-                except Exception as e:
-                    logger.warning(f"⚠️ 关闭旧音频流时出错: {e}")
-            
-            # 等待设备完全释放（重要：给 PortAudio 时间释放设备）
-            import time
-            logger.info("⏳ 等待音频设备释放...")
-            time.sleep(0.5)  # 等待 500ms 让设备完全释放
-            
-            # 重新初始化音频流（带重试机制）
-            if hasattr(self.streaming_recorder, '_init_audio_stream'):
-                max_retries = 3
-                retry_delay = 0.5
-                
-                for attempt in range(max_retries):
-                    try:
-                        logger.info(f"🔄 重新启动音频流... (尝试 {attempt + 1}/{max_retries})")
-                        self.streaming_recorder._init_audio_stream()
-                        logger.info("✅ 音频流已重新启动")
-                        break
-                    except Exception as e:
-                        if attempt < max_retries - 1:
-                            logger.warning(f"⚠️ 启动音频流失败，{retry_delay}秒后重试: {e}")
-                            time.sleep(retry_delay)
-                            retry_delay *= 1.5  # 指数退避
-                        else:
-                            logger.error(f"❌ 重新启动音频流失败（已重试 {max_retries} 次）: {e}", exc_info=True)
+            if hasattr(self.streaming_recorder, 'stop_webrtc_mode'):
+                self.streaming_recorder.stop_webrtc_mode()
+            logger.info("✅ [CALL_END] 已停止 WebRTC 模式（音频流保持运行）")
         except Exception as e:
-            logger.error(f"❌ 重新启动音频流失败: {e}", exc_info=True)
-        
-        # 切换回空闲状态
+            logger.warning(f"⚠️ 停止 WebRTC 模式时出错: {e}")
+
+        # 音频流一直保持运行，不需要重新初始化
+        # 只需要确保状态正确，_handle_idle() 会自动启动 _waiting_task
+
+        # 状态和 UI 回到空闲
         self.state = AppState.IDLE
         self._set_idle_ui()
-        # streaming_recorder 的音频流已重新启动，_handle_idle() 会自动启动 _waiting_task
     
     def _handle_calling(self):
         """处理通话状态 - 保持通话 UI，不处理其他逻辑"""
@@ -541,7 +529,7 @@ class AssistantApp:
         """处理 LLM 思考状态（在后台线程执行）"""
         # 检查是否已有后台任务在运行
         with self._task_lock:
-            logger.info(f"🔍 [思考任务] 当前背景任务: {self._background_task}")
+            # logger.info(f"🔍 [思考任务] 当前背景任务: {self._background_task}")
             if self._background_task and self._background_task.is_alive():
                 return  # 任务已在运行，跳过
         

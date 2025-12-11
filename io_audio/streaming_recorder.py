@@ -29,7 +29,8 @@ class StreamingRecorder:
         """
         self.wake_word = wake_word.lower()
         self.sample_rate = config.AUDIO_SAMPLE_RATE
-        self.block_size = 8000
+        # block_size 将在 _init_audio_stream 中根据实际采样率设置为 20ms（用于 WebRTC 兼容）
+        self.block_size = None  # 将在初始化时设置
         self.volume_gain = 2.0
         self.device_id = 1
         self.on_wake_word_detected = on_wake_word_detected
@@ -61,6 +62,10 @@ class StreamingRecorder:
         self.audio_queue = queue.Queue()
         self.is_recording = False
         self._wake_word_detection_active = False  # 唤醒词检测激活标志
+        self._webrtc_active = False  # WebRTC 通话激活标志
+        
+        # WebRTC 音频数据队列（用于 WebRTC 通话时获取音频）
+        self._webrtc_audio_queue = queue.Queue(maxsize=10)
         
         # Google 流式识别相关变量（用于类方法访问）
         self._google_queue = None
@@ -130,6 +135,12 @@ class StreamingRecorder:
             
             self._needs_resample = (self._actual_sample_rate != self.sample_rate)
             
+            # 设置 block_size 为 20ms（WebRTC 标准块大小）
+            # 20ms = 0.02 秒，对于 48000Hz 是 960 样本，对于 16000Hz 是 320 样本
+            webrtc_block_size = int(self._actual_sample_rate * 0.02)
+            self.block_size = webrtc_block_size
+            logger.info(f"📏 设置音频块大小为 {self.block_size} 样本（20ms @ {self._actual_sample_rate}Hz，用于 WebRTC 兼容）")
+            
             # 启动音频流（保持一直运行）
             self._audio_stream = sd.InputStream(
                 device=self.device_id if self._device_info else None,
@@ -147,7 +158,7 @@ class StreamingRecorder:
             raise
     
     def audio_callback(self, indata, frames, time, status):
-        """音频采集回调"""
+        """音频采集回调 - 同时提供给唤醒词检测和 WebRTC 使用"""
         if status:
             logger.warning(f"⚠️ 音频状态: {status}")
         
@@ -167,7 +178,31 @@ class StreamingRecorder:
         audio_float = audio_chunk.astype(np.float32) * self.volume_gain
         audio_chunk = np.clip(audio_float, -32768, 32767).astype(np.int16)
         
-        self.audio_queue.put(audio_chunk.tobytes())
+        audio_bytes = audio_chunk.tobytes()
+        
+        # 同时提供给唤醒词检测和 WebRTC 使用
+        # 唤醒词检测队列（用于唤醒词和识别）
+        try:
+            self.audio_queue.put_nowait(audio_bytes)
+        except queue.Full:
+            # 如果队列满了，丢弃最旧的数据
+            try:
+                self.audio_queue.get_nowait()
+                self.audio_queue.put_nowait(audio_bytes)
+            except queue.Empty:
+                pass
+        
+        # WebRTC 音频队列（用于通话时）
+        if self._webrtc_active:
+            try:
+                self._webrtc_audio_queue.put_nowait(audio_bytes)
+            except queue.Full:
+                # 如果队列满了，丢弃最旧的数据
+                try:
+                    self._webrtc_audio_queue.get_nowait()
+                    self._webrtc_audio_queue.put_nowait(audio_bytes)
+                except queue.Empty:
+                    pass
     
     def _detect_wake_word(self, audio_data: bytes) -> bool:
         """检测唤醒词"""
@@ -407,19 +442,45 @@ class StreamingRecorder:
             self._wake_word_detection_active = False
     
     def stop(self):
-        """停止录音和关闭音频流"""
+        """停止录音逻辑（但不关闭音频流，保持音频流一直运行）"""
         self.is_recording = False
         self._wake_word_detection_active = False
+        self._webrtc_active = False
         
-        if self._audio_stream:
-            try:
-                if self._audio_stream.active:
-                    self._audio_stream.stop()
-                self._audio_stream.close()
-                logger.info("⏹️ 音频流已关闭")
-            except Exception as e:
-                logger.warning(f"⚠️ 关闭音频流时出错: {e}")
-            finally:
-                self._audio_stream = None  # 确保设置为 None，释放引用
+        # 清空 WebRTC 队列
+        try:
+            while not self._webrtc_audio_queue.empty():
+                self._webrtc_audio_queue.get_nowait()
+        except:
+            pass
         
-        logger.info("⏹️ 停止录音")
+        logger.info("⏹️ 停止录音逻辑（音频流保持运行）")
+    
+    def start_webrtc_mode(self):
+        """启动 WebRTC 模式 - 音频数据将同时提供给 WebRTC"""
+        self._webrtc_active = True
+        # 清空队列，避免旧数据
+        try:
+            while not self._webrtc_audio_queue.empty():
+                self._webrtc_audio_queue.get_nowait()
+        except:
+            pass
+        logger.info("✅ WebRTC 模式已启动，音频数据将提供给 WebRTC")
+    
+    def stop_webrtc_mode(self):
+        """停止 WebRTC 模式"""
+        self._webrtc_active = False
+        # 清空队列
+        try:
+            while not self._webrtc_audio_queue.empty():
+                self._webrtc_audio_queue.get_nowait()
+        except:
+            pass
+        logger.info("✅ WebRTC 模式已停止")
+    
+    def get_webrtc_audio(self, timeout=0.1):
+        """获取音频数据供 WebRTC 使用（非阻塞）"""
+        try:
+            return self._webrtc_audio_queue.get(timeout=timeout)
+        except queue.Empty:
+            return None
